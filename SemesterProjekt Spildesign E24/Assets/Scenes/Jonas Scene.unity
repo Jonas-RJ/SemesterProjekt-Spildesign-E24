@@ -519,7 +519,7 @@ GameObject:
   m_Component:
   - component: {fileID: 521404175}
   - component: {fileID: 521404176}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Graphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -735,7 +735,7 @@ GameObject:
   - component: {fileID: 921602587}
   - component: {fileID: 921602586}
   - component: {fileID: 921602590}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -891,7 +891,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1022199479}
   - component: {fileID: 1022199480}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Graphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -978,7 +978,7 @@ GameObject:
   - component: {fileID: 1154494150}
   - component: {fileID: 1154494151}
   - component: {fileID: 1154494152}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1138,7 +1138,7 @@ GameObject:
   - component: {fileID: 1365163278}
   - component: {fileID: 1365163277}
   - component: {fileID: 1365163276}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: 'Vertical Ingame wall '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1359,7 +1359,7 @@ GameObject:
   - component: {fileID: 2085131612}
   - component: {fileID: 2085131611}
   - component: {fileID: 2085131610}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ingame wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
