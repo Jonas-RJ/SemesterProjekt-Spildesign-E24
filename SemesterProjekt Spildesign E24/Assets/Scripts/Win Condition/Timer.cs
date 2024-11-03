@@ -27,7 +27,6 @@ public class Timer : MonoBehaviour
             remainingTime = 0;
             //player wins();
             timerText.color = Color.green;
-            GameOverScreen.Setup();
             //Display player wins for den spiller der vinder
         }
 
