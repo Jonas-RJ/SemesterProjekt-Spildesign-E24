@@ -20,8 +20,8 @@ public class Timer : MonoBehaviour
             //Subtracts time from the remaingingTime variable
             remainingTime -= Time.deltaTime;
         }
-        //endnu et if statement indeni til hvis timeren skal reset hvis den anden player får donut
-        else if (remainingTime < 0)
+        //endnu et if statement indeni til hvis timeren skal reset hvis den anden player fï¿½r donut
+        else if (remainingTime <= 0)
         {
             //stops the timer when it reaches 0 and turns it green
             remainingTime = 0;
