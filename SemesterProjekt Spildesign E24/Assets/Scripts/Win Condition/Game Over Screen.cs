@@ -7,14 +7,14 @@ using UnityEngine.SceneManagement;
 public class GameOverScreen : MonoBehaviour
 {
     public Text winnerText;
-    public void Setup(string player)
+    public void Setup(int Winningplayer)
     {
         gameObject.SetActive(true);
-        winnerText.text = player.ToString() + " WINS!";
+        winnerText.text = Winningplayer.ToString() + " WINS!";
     }
     public void RestartButton()
     {
-        SceneManager.LoadScene("Emil Scene");
+        SceneManager.LoadScene("Emil Scene"); //Burde være "Game Scene" i fremtiden
     }
     public void MainMenuButton()
     {

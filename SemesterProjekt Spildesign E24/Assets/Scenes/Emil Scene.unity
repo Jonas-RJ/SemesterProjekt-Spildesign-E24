@@ -856,10 +856,10 @@ RectTransform:
   - {fileID: 320155840}
   m_Father: {fileID: 715071526}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 832, y: 532}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &582239931
 MonoBehaviour:
@@ -873,6 +873,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 070d4f7bfe9dc4e48a745f998df95894, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  winnerText: {fileID: 0}
 --- !u!114 &582239932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2021,6 +2022,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timerText: {fileID: 1619314334}
   remainingTime: 5
+  GameOverScreen: {fileID: 0}
 --- !u!1 &1680459154
 GameObject:
   m_ObjectHideFlags: 0

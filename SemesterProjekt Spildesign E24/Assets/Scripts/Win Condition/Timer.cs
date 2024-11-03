@@ -20,18 +20,20 @@ public class Timer : MonoBehaviour
             //Subtracts time from the remaingingTime variable
             remainingTime -= Time.deltaTime;
         }
-        //endnu et if statement indeni til hvis timeren skal reset hvis den anden player f�r donut
+        //Endnu et if statement indeni til hvis timeren skal reset hvis den anden player tager donut?
         else if (remainingTime <= 0)
         {
-            //stops the timer when it reaches 0 and turns it green
+            //Stops the timer when it reaches 0 and turns it green
             remainingTime = 0;
             //player wins();
             timerText.color = Color.green;
             //Display player wins for den spiller der vinder
         }
 
+        //Divides the number elapsed time into minutes and seconds
         int minutes = Mathf.FloorToInt(remainingTime / 60);
         int seconds = Mathf.FloorToInt(remainingTime % 60);
+        //Formats the string to write "00:00" and input the variables in their respective order
         timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 
