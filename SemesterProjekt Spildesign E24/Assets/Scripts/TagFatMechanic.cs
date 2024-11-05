@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class TagFatMechanic : MonoBehaviour
 {
-
-   // public GameController GCcooldown;
+    public Timer _timer;
+    public GameController GCcooldown;
     public bool donutIsTaken = false;
     public bool donutIsEat = false;
 
@@ -19,7 +20,7 @@ public class TagFatMechanic : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        // Check hvilken player er hvilken. 
         if(gameObject.layer == 6) 
         
         {
@@ -68,13 +69,15 @@ public class TagFatMechanic : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
 
-       
+       // sætter donut til spist, deaktiverer donutten, giver et tag til den player der tager donutten. 
         if (other.gameObject.CompareTag("Donut"))
         {
             other.gameObject.SetActive(false);
             donutIsEat = true;
             gameObject.tag = "HasDonut";
             print("donutcollision");
+
+            /* */
         }
         
    
@@ -97,36 +100,38 @@ public class TagFatMechanic : MonoBehaviour
 
 
 
-    private void OnCollisionEnter2D(Collision2D col)
+    public void OnCollisionEnter2D(Collision2D col)
     {
 
-        if (col.gameObject.CompareTag("HasDonut") && _cop)
+        if (GCcooldown.tagReady)
         {
+            print("hej:3");
+            if (col.gameObject.CompareTag("HasDonut") && _cop)
+            {
 
-            // Do so that the other gameobject (the other player or the donut) loses the "HasDonut" tag.
-            col.gameObject.tag = "NoDonut";
-            gameObject.tag = "HasDonut";
+                // Do so that the other gameobject (the other player or the donut) loses the "HasDonut" tag.
+                col.gameObject.tag = "NoDonut";
+                gameObject.tag = "HasDonut";
 
 
-            print("1");
+                print("1");
 
-            // (Re)Start the timer
+                // (Re)Start the timer
 
-            // Change sprite to a sprite where the player holds the donut
-            //   StartCoroutine(GCcooldown.startCooldown());
+                // Change sprite to a sprite where the player holds the donut
+                //   StartCoroutine(GCcooldown.startCooldown());
 
+            }
+            else if (col.gameObject.CompareTag("NoDonut") && _cop)
+            {
+                col.gameObject.tag = "HasDonut";
+                gameObject.tag = "NoDonut";
+
+                print("2");
+                if (GCcooldown.tagReady) { }
+            }
         }
-        else if (col.gameObject.CompareTag("NoDonut") && _cop)
-        {
-            col.gameObject.tag = "HasDonut";
-            gameObject.tag = "NoDonut";
-
-            print("2");
-            //   StartCoroutine(GCcooldown.startCooldown());
-        }
-       /* if (GCcooldown.tagReady)
-        {
-           
-        } */
+        
+            
     }
 }
