@@ -3,19 +3,21 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
+
 public class TagFatMechanic : MonoBehaviour
 {
     public Timer _timer;
     public GameController GCcooldown;
     public bool donutIsTaken = false;
     public bool donutIsEat = false;
-
+    
+    public int Winningplayer;
 
     public GameObject Player1;  
     public GameObject Player2;
 
     [SerializeField] private bool _cop;
-   [SerializeField] private bool _prisoner;
+    [SerializeField] private bool _prisoner;
 
     // Start is called before the first frame update
     void Start()

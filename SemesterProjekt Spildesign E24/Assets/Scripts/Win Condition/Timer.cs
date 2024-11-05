@@ -8,7 +8,7 @@ public class Timer : MonoBehaviour
     //variable for the timer object
     [SerializeField] TextMeshProUGUI timerText;
     //variable for the time
-    [SerializeField] float remainingTime;
+    public float remainingTime;
     public GameOverScreen GameOverScreen;
     
     // Update is called once per frame
@@ -25,7 +25,7 @@ public class Timer : MonoBehaviour
         {
             //Stops the timer when it reaches 0 and turns it green
             remainingTime = 0;
-            //player wins();
+            GameOverScreen.GameOver();
             timerText.color = Color.green;
             //Display player wins for den spiller der vinder
         }
