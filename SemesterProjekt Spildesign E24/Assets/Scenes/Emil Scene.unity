@@ -1137,7 +1137,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &582239930
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1755,6 +1755,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b844246d839bc40a2bd27b2f5f56f61d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _timer: {fileID: 0}
+  GCcooldown: {fileID: 0}
   donutIsTaken: 0
   donutIsEat: 0
   Winningplayer: 0
@@ -2100,6 +2102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coolDownPeriod: 1
   tagReady: 0
+  firstTag: 0
 --- !u!4 &1286830960
 Transform:
   m_ObjectHideFlags: 0
@@ -2332,6 +2335,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b844246d839bc40a2bd27b2f5f56f61d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _timer: {fileID: 0}
+  GCcooldown: {fileID: 0}
   donutIsTaken: 0
   donutIsEat: 0
   Winningplayer: 0
@@ -2628,7 +2633,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 1619314334}
-  remainingTime: 5
+  remainingTime: 4
   GameOverScreen: {fileID: 582239931}
 --- !u!1 &1816474322
 GameObject:
