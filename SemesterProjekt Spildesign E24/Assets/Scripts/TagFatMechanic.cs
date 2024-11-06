@@ -19,6 +19,9 @@ public class TagFatMechanic : MonoBehaviour
     [SerializeField] private bool _cop;
     [SerializeField] private bool _prisoner;
 
+    public float coolDownTime = 5f;
+    private float lastTimeUsed;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -71,7 +74,7 @@ public class TagFatMechanic : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
 
-       // s�tter donut til spist, deaktiverer donutten, giver et tag til den player der tager donutten. 
+       // s�tter donut til spist, deaktiverer donutten, giver et tag til den player der tager donutten. 
         if (other.gameObject.CompareTag("Donut"))
         {
             other.gameObject.SetActive(false);
@@ -99,16 +102,17 @@ public class TagFatMechanic : MonoBehaviour
 
 
     }
-
+    
 
 
     public void OnCollisionEnter2D(Collision2D col)
     {
 
-        if (GCcooldown.tagReady)
-        {
+        // if (GCcooldown.tagReady)
+        // {
             print("hej:3");
-            if (col.gameObject.CompareTag("HasDonut") && _cop)
+        // Tjekker om det andet objekt har donutten og er cop plus tjekker om tiden NU er større end tiden sidst vi taggede plus cooldown tiden.
+            if (col.gameObject.CompareTag("HasDonut") && _cop && Time.time > lastTimeUsed + coolDownTime)
             {
 
                 // Do so that the other gameobject (the other player or the donut) loses the "HasDonut" tag.
@@ -118,21 +122,25 @@ public class TagFatMechanic : MonoBehaviour
 
                 print("1");
 
-                // (Re)Start the timer
+            // (Re)Start the timer
 
-                // Change sprite to a sprite where the player holds the donut
-                //   StartCoroutine(GCcooldown.startCooldown());
+            // Change sprite to a sprite where the player holds the donut
+            //   StartCoroutine(GCcooldown.startCooldown());
 
+                lastTimeUsed = Time.time;
             }
-            else if (col.gameObject.CompareTag("NoDonut") && _cop)
+            // Tjekker om det andet objekt ikke har donutten og er cop plus tjekker om tiden NU er større end tiden sidst vi taggede plus cooldown tiden.
+            else if (col.gameObject.CompareTag("NoDonut") && _cop && Time.time > lastTimeUsed + coolDownTime)
             {
                 col.gameObject.tag = "HasDonut";
                 gameObject.tag = "NoDonut";
 
                 print("2");
-                if (GCcooldown.tagReady) { }
+                lastTimeUsed = Time.time;
+
+            if (GCcooldown.tagReady) { }
             }
-        }
+        //}
         
             
     }
