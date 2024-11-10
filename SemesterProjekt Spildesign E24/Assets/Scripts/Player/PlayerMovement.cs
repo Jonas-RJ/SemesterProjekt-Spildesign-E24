@@ -16,17 +16,34 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 _movementInput;
     private Vector2 _smoothedMoveInput;
     private Vector2 _smoothMoveVelocity;
-   
+
+    [Header("Dash Variables")]
+    [SerializeField] bool canDash = true;
+    [SerializeField] bool isDashing;
+    [SerializeField] float dashPower;
+    [SerializeField] float dashTime;
+    [SerializeField] float dashCooldown;
+    [SerializeField] private TrailRenderer dashTrail;
+    private float waitTime;
+
 
 
 
     private void Awake()
     {
        _rb = GetComponent<Rigidbody2D>();
+       dashTrail = GetComponent<TrailRenderer>();
+       canDash = true;
+    }
+
+    private void Update()
+    {
+       
     }
 
     private void FixedUpdate()
     {
+       
         SetPlayerVelocity();
         RotateInDirectionOfInput();
     }
@@ -66,4 +83,14 @@ public class PlayerMovement : MonoBehaviour
       _movementInput =  inputValue.Get<Vector2>();
 
     }
+
+    private void OnFire(InputValue inputValue)
+    {
+      
+        Debug.Log("Pressed Dash Button");
+        
+    }
+
+    
+
 }
