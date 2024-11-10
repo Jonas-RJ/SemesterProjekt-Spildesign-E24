@@ -7,13 +7,14 @@ using TMPro;
 
 public class GameOverScreen : MonoBehaviour
 {
-    public Timer timer;
+    public Timer _timer;
     public TagFatMechanic TFMechanic;
     public TextMeshProUGUI winnerText;
     public GameObject player1;
     public GameObject player2;
     int i;
 
+    //Checker hvem der har Donutten for at kunne skrive hvem der har vundet
     public void GameOver()
     {
         gameObject.SetActive(true);
@@ -38,10 +39,14 @@ public class GameOverScreen : MonoBehaviour
         }
 
     }
+
+    //Loader vores spil scene
     public void RestartButton()
     {
         SceneManager.LoadScene("Emil Scene"); //Burde være "Game Scene" i fremtiden
     }
+
+    //Loader Main Menu scene
     public void MainMenuButton()
     {
         //SceneManager.LoadScene("Main Menu Scene");

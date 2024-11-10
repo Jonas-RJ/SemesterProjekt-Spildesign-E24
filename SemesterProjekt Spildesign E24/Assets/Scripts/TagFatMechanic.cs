@@ -10,7 +10,12 @@ public class TagFatMechanic : MonoBehaviour
     public GameController GCcooldown;
     public bool donutIsTaken = false;
     public bool donutIsEat = false;
-    
+    public bool canRun = false;
+
+    public int Player1time;
+    public int Player2time;
+
+
     public int Winningplayer;
 
     public GameObject Player1;  
@@ -63,7 +68,7 @@ public class TagFatMechanic : MonoBehaviour
         // hvis den ene player har tagget HasDonut, gives NoDonut til den anden. To if statements, et for hver player.
         if (donutIsTaken && Player1.tag == "HasDonut") 
         {
-            Player2.tag = "NoDonut";
+            Player2.tag = "NoDonut"; 
         }
         if (donutIsTaken && Player2.tag == "HasDonut")
         {
@@ -81,6 +86,7 @@ public class TagFatMechanic : MonoBehaviour
             donutIsEat = true;
             gameObject.tag = "HasDonut";
             print("donutcollision");
+            _timer.canRun = true;
 
             /* */
         }
