@@ -116,7 +116,7 @@ public class TagFatMechanic : MonoBehaviour
 
         // if (GCcooldown.tagReady)
         // {
-            print("hej:3");
+            //print("hej:3");
         // Tjekker om det andet objekt har donutten og er cop plus tjekker om tiden NU er større end tiden sidst vi taggede plus cooldown tiden.
             if (col.gameObject.CompareTag("HasDonut") && _cop && Time.time > lastTimeUsed + coolDownTime)
             {
