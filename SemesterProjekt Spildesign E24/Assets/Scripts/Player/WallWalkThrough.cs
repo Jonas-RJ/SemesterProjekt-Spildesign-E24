@@ -28,6 +28,9 @@ public class WallWalkThrough : MonoBehaviour
     }
   */
 
+    private bool check1 = false;
+    private bool check2 = false;
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         print("Wall works now");
