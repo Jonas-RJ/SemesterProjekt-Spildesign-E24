@@ -1727,6 +1727,10 @@ PrefabInstance:
       propertyPath: donuttag
       value: 
       objectReference: {fileID: 1471191587}
+    - target: {fileID: 5458526303713458320, guid: e5bd5b9be8235394c906ba2c0f7574cf, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6029813117704314509, guid: e5bd5b9be8235394c906ba2c0f7574cf, type: 3}
       propertyPath: donuttag
       value: 

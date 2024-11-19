@@ -154,6 +154,7 @@ MonoBehaviour:
   GameOverScreen: {fileID: 1844564402833975058}
   donuttag: {fileID: 0}
   canRun: 0
+  orange: {r: 1, g: 0.64, b: 0, a: 1}
 --- !u!1 &998261895470097197
 GameObject:
   m_ObjectHideFlags: 0
@@ -1323,3 +1324,4 @@ MonoBehaviour:
   GameOverScreen: {fileID: 1844564402833975058}
   donuttag: {fileID: 0}
   canRun: 0
+  orange: {r: 1, g: 0.64, b: 0, a: 1}
