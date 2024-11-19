@@ -14,5 +14,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Emil Scene.unity
     guid: c630461df2fff584abf9b570546395f3
+  - enabled: 1
+    path: Assets/Scenes/How To Play Scene.unity
+    guid: 38a52c34a0cae12458280816cabf95f5
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 7bc4d309286606040b1af21ce0718068, type: 2}

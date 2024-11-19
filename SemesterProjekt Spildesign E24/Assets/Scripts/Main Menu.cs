@@ -15,6 +15,6 @@ public class MainMenu : MonoBehaviour
     //Loader Main Menu scene
     public void HowToPlayButton()
     {
-        //SceneManager.LoadScene("How To Play Scene");
+        SceneManager.LoadScene("How To Play Scene");
     }
 }
