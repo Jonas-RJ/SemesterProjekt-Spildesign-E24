@@ -14,12 +14,19 @@ public class Timer : MonoBehaviour
     public GameOverScreen GameOverScreen;
     public TagFatMechanic donuttag;
     public bool canRun = false;
+    // Definerer en ny farve "orange"
+    public Color orange = new Color(1.0f, 0.64f, 0.0f);
 
     // Update is called once per frame
     void Update()
     {
+        
         if (canRun)
         {
+            // Starter med at give de to timere en farve der matcher spillerfarven
+            timerText1.color = Color.blue;
+            timerText2.color = orange;
+
             //if statement checks if timer reaches 0 and keeps it at 0 if it does
             if (remaining1Time > 0 && donuttag.Player1.tag == "HasDonut") //&& donut get == true
             {
