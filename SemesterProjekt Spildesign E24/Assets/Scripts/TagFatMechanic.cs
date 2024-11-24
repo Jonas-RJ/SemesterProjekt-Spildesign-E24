@@ -1,7 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
+
+
+
+
 
 
 public class TagFatMechanic : MonoBehaviour
@@ -18,6 +24,11 @@ public class TagFatMechanic : MonoBehaviour
 
     public int Winningplayer;
 
+    [SerializeField] private Light2D player1Light;
+    [SerializeField] private Light2D player2Light;
+    [SerializeField] private Light2D lightsUniversal;
+
+
     public GameObject Player1;  
     public GameObject Player2;
 
@@ -33,6 +44,11 @@ public class TagFatMechanic : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        player1Light = GetComponent<Light2D>();
+        player2Light = GetComponent<Light2D>();
+        lightsUniversal = GetComponent<Light2D>();
+
+
         // Check hvilken player er hvilken. 
         if(gameObject.layer == 6) 
         
@@ -95,6 +111,7 @@ public class TagFatMechanic : MonoBehaviour
             // Disse to variabler eksisterer kun for at de kan blive brugt i MusicController scriptet til at spille lyden.
             prisonerHasDonut = false;
             copHasDonut = true;
+          //  lightsUniversal.enabled = false;
             /* */
         }
         if (other.gameObject.CompareTag("Donut") && _prisoner)
