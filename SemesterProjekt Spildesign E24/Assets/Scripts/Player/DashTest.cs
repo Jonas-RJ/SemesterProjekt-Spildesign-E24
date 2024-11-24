@@ -12,7 +12,7 @@ public class DashTest : MonoBehaviour
     bool canDash = true;
     public float moveSpeed = 10f;
 
-    private Vector2 movementInput;
+    private Vector3 movementInput;
 
     private Rigidbody2D rb;
     public GameObject Player1;
@@ -39,7 +39,7 @@ public class DashTest : MonoBehaviour
            // print("im dashing ");
             return;
         }
-        rb.velocity = new Vector3(movementInput.x * moveSpeed, rb.velocity.y, movementInput.y * moveSpeed); 
+        rb.velocity = new Vector2(movementInput.x * moveSpeed, movementInput.y * moveSpeed); 
     }
 
     public void OnFire(InputValue inputValue)
@@ -59,7 +59,7 @@ public class DashTest : MonoBehaviour
     {
         canDash = false; // Sets can dash to false, so as to prevent spam dashing
         isDashing = true; // Sets isdashing to true, as we are currently running the code for dashing
-        rb.velocity = new Vector3(movementInput.x * dashSpeed, 0, movementInput.y * dashSpeed); // Updates the speed of player, as to simulate a dash
+        rb.velocity = new Vector2(movementInput.x * dashSpeed, movementInput.y * dashSpeed); // Updates the speed of player, as to simulate a dash
         yield return new WaitForSeconds(dashDuration); // After the dash duration, removes the above speed changes, so as to go back to normal
         isDashing = false; // As we are no longer dashing, we set it to false (for animation reasons later?)
         //capsuleCollider.isTrigger = false;

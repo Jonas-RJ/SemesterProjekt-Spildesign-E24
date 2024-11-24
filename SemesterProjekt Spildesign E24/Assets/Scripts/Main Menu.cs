@@ -6,13 +6,13 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    //Loader vores spil scene
+    //Loader vores spil scene ved tryk af knap som vi giver denne method
     public void PlayButton()
     {
-        SceneManager.LoadScene("Emil Scene"); //Burde være "Game Scene" i fremtiden
+        SceneManager.LoadScene("GameTestScene"); //Burde være "Game Scene" i fremtiden
     }
 
-    //Loader Main Menu scene
+    //Loader Main Menu scene ved tryk af knap som vi giver denne method
     public void HowToPlayButton()
     {
         SceneManager.LoadScene("How To Play Scene");
