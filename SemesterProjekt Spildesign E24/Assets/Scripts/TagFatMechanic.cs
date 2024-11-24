@@ -161,8 +161,8 @@ public class TagFatMechanic : MonoBehaviour
                 col.gameObject.tag = "NoDonut";
                 gameObject.tag = "HasDonut";
 
-                prisonerHasDonut = true;
-                copHasDonut = false;
+                prisonerHasDonut = false;
+                copHasDonut = true;
 
 
                 print("1");
@@ -180,8 +180,8 @@ public class TagFatMechanic : MonoBehaviour
                 col.gameObject.tag = "HasDonut";
                 gameObject.tag = "NoDonut";
 
-                prisonerHasDonut = false;
-                copHasDonut = true;
+                prisonerHasDonut = true;
+                copHasDonut = false;
                 
 
                 print("2");
