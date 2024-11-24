@@ -24,9 +24,8 @@ public class TagFatMechanic : MonoBehaviour
 
     public int Winningplayer;
 
-    [SerializeField] private Light2D player1Light;
-    [SerializeField] private Light2D player2Light;
-    [SerializeField] private Light2D lightsUniversal;
+    [SerializeField] private GameObject player1Light;
+    [SerializeField] private GameObject player2Light;
 
 
     public GameObject Player1;  
@@ -44,10 +43,13 @@ public class TagFatMechanic : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player1Light = GetComponent<Light2D>();
-        player2Light = GetComponent<Light2D>();
-        lightsUniversal = GetComponent<Light2D>();
+        player1Light.SetActive(false);
+        player2Light.SetActive(false); 
+       // player1Light = GetComponent<Light2D>();
+      //  player2Light = GetComponent<Light2D>();
 
+    //    player2Light.enabled = true;
+      //  player1Light.enabled = true;
 
         // Check hvilken player er hvilken. 
         if(gameObject.layer == 6) 
@@ -74,11 +76,28 @@ public class TagFatMechanic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Player1.tag == "HasDonut")
+        {
+            player1Light.SetActive(true);
+            player2Light.SetActive(false);
+           // player1Light.enabled = true;
+          //      player2Light.enabled = false;
+            print("player 1 has lights on ");
+        }
+        if (Player2.tag == "HasDonut")
+        {
+            player2Light.SetActive(true);
+            player1Light.SetActive(false);
+          //  player2Light.enabled = true;
+            print("player 2 has lights on ");
 
+            //   player1Light.enabled = false;
+        }
         // variable der checkes i update for at der opdateres for begge players
         if (donutIsEat)
         { 
             donutIsTaken=true;
+          
         }
         
 
@@ -111,7 +130,8 @@ public class TagFatMechanic : MonoBehaviour
             // Disse to variabler eksisterer kun for at de kan blive brugt i MusicController scriptet til at spille lyden.
             prisonerHasDonut = false;
             copHasDonut = true;
-          //  lightsUniversal.enabled = false;
+           //player1Light.enabled = true;
+            //player2Light.enabled = false;
             /* */
         }
         if (other.gameObject.CompareTag("Donut") && _prisoner)
@@ -124,6 +144,8 @@ public class TagFatMechanic : MonoBehaviour
 
             prisonerHasDonut = true;
             copHasDonut = false;
+          //  player2Light.enabled = true;
+           // player1Light.enabled = false;
             /* */
         }
 
