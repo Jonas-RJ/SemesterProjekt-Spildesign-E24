@@ -84,6 +84,8 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
+
+    /*
     private void OnFire(InputValue inputValue)
     {
       
@@ -91,6 +93,6 @@ public class PlayerMovement : MonoBehaviour
         
     }
 
-    
+    */
 
 }
