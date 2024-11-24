@@ -908,6 +908,25 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &1154494152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1154494143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 386e06462a79e0b49a05a1e8ad2805ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dashSpeed: 30
+  dashDuration: 1
+  dashCooldown: 3
+  isDashing: 0
+  moveSpeed: 10
+  Player1: {fileID: 1154494143}
+  Player2: {fileID: 921602584}
 --- !u!1 &1190294113
 GameObject:
   m_ObjectHideFlags: 0
@@ -1570,6 +1589,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 331751795296548175, guid: 227c80f9ddc3fee498e44df585f5634d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1154494144}
+    - targetCorrespondingSourceObject: {fileID: 331751795296548175, guid: 227c80f9ddc3fee498e44df585f5634d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1154494152}
   m_SourcePrefab: {fileID: 100100000, guid: 227c80f9ddc3fee498e44df585f5634d, type: 3}
 --- !u!1001 &8358371939346219752
 PrefabInstance:
