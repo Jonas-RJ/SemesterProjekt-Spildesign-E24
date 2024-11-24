@@ -9,7 +9,7 @@ public class MainMenu : MonoBehaviour
     //Loader vores spil scene
     public void PlayButton()
     {
-        SceneManager.LoadScene("Emil Scene"); //Burde være "Game Scene" i fremtiden
+        SceneManager.LoadScene("GameTestScene"); //Burde være "Game Scene" i fremtiden
     }
 
     //Loader Main Menu scene

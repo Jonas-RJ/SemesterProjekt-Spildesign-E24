@@ -260,10 +260,42 @@ PrefabInstance:
       propertyPath: m_Name
       value: UICanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 2232883642443082514, guid: e5bd5b9be8235394c906ba2c0f7574cf, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3074428107890916419, guid: e5bd5b9be8235394c906ba2c0f7574cf, type: 3}
+      propertyPath: m_Colors.m_NormalColor.b
+      value: 0.14901961
+      objectReference: {fileID: 0}
+    - target: {fileID: 3074428107890916419, guid: e5bd5b9be8235394c906ba2c0f7574cf, type: 3}
+      propertyPath: m_Colors.m_NormalColor.g
+      value: 0.4431373
+      objectReference: {fileID: 0}
+    - target: {fileID: 3074428107890916419, guid: e5bd5b9be8235394c906ba2c0f7574cf, type: 3}
+      propertyPath: m_Colors.m_NormalColor.r
+      value: 0.8745099
+      objectReference: {fileID: 0}
     - target: {fileID: 5025103521293193573, guid: e5bd5b9be8235394c906ba2c0f7574cf, type: 3}
       propertyPath: donuttag
       value: 
       objectReference: {fileID: 1424437253}
+    - target: {fileID: 5458526303713458320, guid: e5bd5b9be8235394c906ba2c0f7574cf, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5661695615383852638, guid: e5bd5b9be8235394c906ba2c0f7574cf, type: 3}
+      propertyPath: m_Colors.m_NormalColor.b
+      value: 0.8941177
+      objectReference: {fileID: 0}
+    - target: {fileID: 5661695615383852638, guid: e5bd5b9be8235394c906ba2c0f7574cf, type: 3}
+      propertyPath: m_Colors.m_NormalColor.g
+      value: 0.80392164
+      objectReference: {fileID: 0}
+    - target: {fileID: 5661695615383852638, guid: e5bd5b9be8235394c906ba2c0f7574cf, type: 3}
+      propertyPath: m_Colors.m_NormalColor.r
+      value: 0.37254903
+      objectReference: {fileID: 0}
     - target: {fileID: 6029813117704314509, guid: e5bd5b9be8235394c906ba2c0f7574cf, type: 3}
       propertyPath: donuttag
       value: 
