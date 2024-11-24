@@ -40,13 +40,13 @@ public class GameOverScreen : MonoBehaviour
 
     }
 
-    //Loader vores spil scene
+    //Loader vores spil scene ved tryk af restart knap som vi giver denne method
     public void RestartButton()
     {
-        SceneManager.LoadScene("Emil Scene"); //Burde være "Game Scene" i fremtiden
+        SceneManager.LoadScene("GameTestScene");
     }
 
-    //Loader Main Menu scene
+    //Loader Main Menu scene ved tryk af knap som vi giver denne method
     public void MainMenuButton()
     {
         SceneManager.LoadScene("Main Menu Scene");
