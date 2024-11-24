@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 _movementInput;
     private Vector2 _smoothedMoveInput;
     private Vector2 _smoothMoveVelocity;
+    private Animator _animator;
 
     [Header("Dash Variables")]
     [SerializeField] bool canDash = true;
@@ -34,8 +35,14 @@ public class PlayerMovement : MonoBehaviour
        _rb = GetComponent<Rigidbody2D>();
        dashTrail = GetComponent<TrailRenderer>();
        canDash = true;
+        _animator = GetComponent<Animator>();
     }
 
+    private void SetAnimation()
+    {
+        bool isMoving = _movementInput != Vector2.zero;
+        _animator.SetBool("IsMoving", isMoving);
+    }
     private void Update()
     {
        
@@ -46,6 +53,7 @@ public class PlayerMovement : MonoBehaviour
        
         SetPlayerVelocity();
         RotateInDirectionOfInput();
+        SetAnimation();
     }
 
     private void SetPlayerVelocity()
