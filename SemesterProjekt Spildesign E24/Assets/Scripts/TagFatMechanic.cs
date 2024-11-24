@@ -27,6 +27,9 @@ public class TagFatMechanic : MonoBehaviour
     public float coolDownTime = 5f;
     private float lastTimeUsed;
 
+    public bool prisonerHasDonut = false;
+    public bool copHasDonut = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -80,7 +83,7 @@ public class TagFatMechanic : MonoBehaviour
     {
 
        // s�tter donut til spist, deaktiverer donutten, giver et tag til den player der tager donutten. 
-        if (other.gameObject.CompareTag("Donut"))
+        if (other.gameObject.CompareTag("Donut") && _cop)
         {
             other.gameObject.SetActive(false);
             donutIsEat = true;
@@ -88,11 +91,27 @@ public class TagFatMechanic : MonoBehaviour
             print("donutcollision");
             _timer.canRun = true;
 
+
+            // Disse to variabler eksisterer kun for at de kan blive brugt i MusicController scriptet til at spille lyden.
+            prisonerHasDonut = false;
+            copHasDonut = true;
             /* */
         }
-        
-   
-        
+        if (other.gameObject.CompareTag("Donut") && _prisoner)
+        {
+            other.gameObject.SetActive(false);
+            donutIsEat = true;
+            gameObject.tag = "HasDonut";
+            print("donutcollision");
+            _timer.canRun = true;
+
+            prisonerHasDonut = true;
+            copHasDonut = false;
+            /* */
+        }
+
+
+
 
 
         /*
@@ -125,6 +144,9 @@ public class TagFatMechanic : MonoBehaviour
                 col.gameObject.tag = "NoDonut";
                 gameObject.tag = "HasDonut";
 
+                prisonerHasDonut = true;
+                copHasDonut = false;
+
 
                 print("1");
 
@@ -140,6 +162,10 @@ public class TagFatMechanic : MonoBehaviour
             {
                 col.gameObject.tag = "HasDonut";
                 gameObject.tag = "NoDonut";
+
+                prisonerHasDonut = false;
+                copHasDonut = true;
+                
 
                 print("2");
                 lastTimeUsed = Time.time;
