@@ -11,13 +11,14 @@ public class MusicController : MonoBehaviour
 
     public GameObject Player1;
     public GameObject Player2;
-    public TagFatMechanic TFScript;
+    public TagFatMechanic TF1Script;
+    public TagFatMechanic TF2Script;
 
     // Start is called before the first frame update
     void Start()
     {
         // Definerer TagFatMechanic scriptet for senere at kunne bruge donutIsEat variablen
-        TFScript = Player1.GetComponent<TagFatMechanic>();
+        TF1Script = Player1.GetComponent<TagFatMechanic>();
 
         startMusic = GetComponent<AudioSource>();
         startMusic.Play();
@@ -40,18 +41,23 @@ public class MusicController : MonoBehaviour
     {
         
 
-        if (TFScript.donutIsEat == true)
+        if (TF1Script.donutIsEat == true)
+        {
+            startMusic.Stop();
+        }
+
+        if (TF2Script.donutIsEat == true)
         {
             startMusic.Stop();
         }
 
         // Baseret på disse 2 variabler, som bliver ændret inde i TagFatMechanic scriptet, spilles det rigtige soundtrack.
-        if (TFScript.prisonerHasDonut == true)
+        if (TF2Script.prisonerHasDonut == true)
         {
             Player1Music.volume = 0;
             Player2Music.volume = 0.1f;
         }
-        if (TFScript.copHasDonut == true)
+        if (TF1Script.copHasDonut == true)
         {
             Player1Music.volume = 0.1f;
             Player2Music.volume = 0;

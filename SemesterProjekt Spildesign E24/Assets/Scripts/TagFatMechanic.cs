@@ -118,7 +118,7 @@ public class TagFatMechanic : MonoBehaviour
     {
 
        // s�tter donut til spist, deaktiverer donutten, giver et tag til den player der tager donutten. 
-        if (other.gameObject.CompareTag("Donut") && _cop)
+        if (other.gameObject.CompareTag("Donut") && gameObject == _cop)
         {
             other.gameObject.SetActive(false);
             donutIsEat = true;
@@ -134,7 +134,7 @@ public class TagFatMechanic : MonoBehaviour
             //player2Light.enabled = false;
             /* */
         }
-        if (other.gameObject.CompareTag("Donut") && _prisoner)
+        if (other.gameObject.CompareTag("Donut") && gameObject == _prisoner)
         {
             other.gameObject.SetActive(false);
             donutIsEat = true;
