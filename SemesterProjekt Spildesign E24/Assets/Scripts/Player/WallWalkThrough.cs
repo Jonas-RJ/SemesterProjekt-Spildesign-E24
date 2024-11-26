@@ -12,12 +12,14 @@ public class WallWalkThrough : MonoBehaviour
     public GameObject WallOpen;
     public GameObject WallClose;
 
+    //public AudioSource wallGoThrough;
+
 
     void Start(){}
     void Update(){}
 
 
-    // efter man går ud af en væg, start coroutine
+    // efter man gï¿½r ud af en vï¿½g, start coroutine
   /* void OnTriggerEnter2D(Collider2D other)
     {
         if (Player2.layer == 7)
@@ -35,6 +37,7 @@ public class WallWalkThrough : MonoBehaviour
     {
         print("Wall works now");
         Invoke("wallOpener", 0.1f);
+        //wallGoThrough.Play();
         Invoke("wallShutter", 10f);
     }
 
@@ -57,7 +60,7 @@ public class WallWalkThrough : MonoBehaviour
   /*  public IEnumerator WallCoolDown()
     {
 
-        // hvis ability er klar, gør intet
+        // hvis ability er klar, gï¿½r intet
         if (wallWalkReady) { yield return null; }
 
 

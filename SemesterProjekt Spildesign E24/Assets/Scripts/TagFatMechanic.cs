@@ -40,6 +40,8 @@ public class TagFatMechanic : MonoBehaviour
     public bool prisonerHasDonut = false;
     public bool copHasDonut = false;
 
+    public AudioSource TouchingSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -112,6 +114,12 @@ public class TagFatMechanic : MonoBehaviour
         {
             Player1.tag = "NoDonut";
         }
+
+
+       
+
+
+
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -166,8 +174,8 @@ public class TagFatMechanic : MonoBehaviour
 
 
     }
-    
 
+   
 
     public void OnCollisionEnter2D(Collision2D col)
     {
@@ -186,6 +194,7 @@ public class TagFatMechanic : MonoBehaviour
                 prisonerHasDonut = false;
                 copHasDonut = true;
 
+                TouchingSound.Play();
 
                 print("1");
 
@@ -204,12 +213,13 @@ public class TagFatMechanic : MonoBehaviour
 
                 prisonerHasDonut = true;
                 copHasDonut = false;
-                
 
-                print("2");
+                TouchingSound.Play();
+
+            print("2");
                 lastTimeUsed = Time.time;
 
-            if (GCcooldown.tagReady) { }
+            //if (GCcooldown.tagReady) { }
             }
         //}
         

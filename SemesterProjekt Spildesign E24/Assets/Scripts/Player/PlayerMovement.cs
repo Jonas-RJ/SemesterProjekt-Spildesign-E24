@@ -27,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private TrailRenderer dashTrail;
     private float waitTime;
 
-
+    public AudioSource walkSound;
 
 
     private void Awake()
@@ -38,14 +38,17 @@ public class PlayerMovement : MonoBehaviour
         _animator = GetComponent<Animator>();
     }
 
-    private void SetAnimation()
+    public void SetAnimation()
     {
         bool isMoving = _movementInput != Vector2.zero;
         _animator.SetBool("IsMoving", isMoving);
+        
     }
     private void Update()
     {
-       
+        
+
+        
     }
 
     private void FixedUpdate()
@@ -54,6 +57,8 @@ public class PlayerMovement : MonoBehaviour
         SetPlayerVelocity();
         RotateInDirectionOfInput();
         SetAnimation();
+        
+
     }
 
     private void SetPlayerVelocity()
@@ -89,7 +94,7 @@ public class PlayerMovement : MonoBehaviour
     private void OnMove(InputValue inputValue)
     {
       _movementInput =  inputValue.Get<Vector2>();
-
+        walkSound.Play();
     }
 
 

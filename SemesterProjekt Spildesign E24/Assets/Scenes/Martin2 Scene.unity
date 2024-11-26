@@ -134,6 +134,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MartinMap
       objectReference: {fileID: 0}
+    - target: {fileID: 5636969955641831712, guid: 7a5e950f3a71e4c6cad263b3253808f1, type: 3}
+      propertyPath: wallGoThrough
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7114039721908327785, guid: 7a5e950f3a71e4c6cad263b3253808f1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.18531907
