@@ -122,79 +122,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &277485328 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2241038170854345756, guid: 7a5e950f3a71e4c6cad263b3253808f1, type: 3}
-  m_PrefabInstance: {fileID: 3817263392328361926}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6f85e5329d3b8f4cbac326c21d61396, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!82 &1112110210 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 8041083440764808362, guid: 7a5e950f3a71e4c6cad263b3253808f1, type: 3}
-  m_PrefabInstance: {fileID: 3817263392328361926}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1235023061
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1235023063}
-  - component: {fileID: 1235023062}
-  m_Layer: 0
-  m_Name: TimerSpriteChanger
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1235023062
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1235023061}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ca9c91fad64844db96bffa61530f737, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Timer1: {fileID: 277485328}
-  Timer2: {fileID: 1698052415}
---- !u!4 &1235023063
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1235023061}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.37232742, y: -1.2959493, z: 0.010113058}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1698052415 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 651674244306043892, guid: 7a5e950f3a71e4c6cad263b3253808f1, type: 3}
-  m_PrefabInstance: {fileID: 3817263392328361926}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6f85e5329d3b8f4cbac326c21d61396, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &3817263392328361926
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -207,10 +134,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MartinMap
       objectReference: {fileID: 0}
-    - target: {fileID: 5636969955641831712, guid: 7a5e950f3a71e4c6cad263b3253808f1, type: 3}
-      propertyPath: wallGoThrough
-      value: 
-      objectReference: {fileID: 1112110210}
     - target: {fileID: 7114039721908327785, guid: 7a5e950f3a71e4c6cad263b3253808f1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.18531907
@@ -251,10 +174,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8436947538485989202, guid: 7a5e950f3a71e4c6cad263b3253808f1, type: 3}
-      propertyPath: bombe
-      value: 
-      objectReference: {fileID: 8300000, guid: d7cc6ece8f3214b0c86f9ad23a1a5add, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -265,4 +184,3 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 3817263392328361926}
-  - {fileID: 1235023063}
