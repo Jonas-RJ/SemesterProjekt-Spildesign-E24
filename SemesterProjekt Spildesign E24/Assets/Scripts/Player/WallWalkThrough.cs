@@ -12,11 +12,14 @@ public class WallWalkThrough : MonoBehaviour
     public GameObject WallOpen;
     public GameObject WallClose;
 
-    //public AudioSource wallGoThrough;
+    public AudioSource wallGoThrough;
 
 
     void Start(){}
-    void Update(){}
+    void Update()
+    {
+        
+    }
 
 
     // efter man g�r ud af en v�g, start coroutine
@@ -36,9 +39,15 @@ public class WallWalkThrough : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         print("Wall works now");
+
         Invoke("wallOpener", 0.1f);
-        //wallGoThrough.Play();
+
         Invoke("wallShutter", 10f);
+
+
+        wallGoThrough.Play();
+        
+        
     }
 
 
@@ -47,6 +56,7 @@ public class WallWalkThrough : MonoBehaviour
      WallClose.SetActive(false);
      WallOpen.SetActive(true) ;
         print("wallshutter");
+        
     }
 
     private void wallOpener()

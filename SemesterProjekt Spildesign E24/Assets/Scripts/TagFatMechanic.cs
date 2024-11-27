@@ -42,6 +42,8 @@ public class TagFatMechanic : MonoBehaviour
 
     public AudioSource TouchingSound;
 
+    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -219,10 +221,14 @@ public class TagFatMechanic : MonoBehaviour
             print("2");
                 lastTimeUsed = Time.time;
 
-            //if (GCcooldown.tagReady) { }
+                //if (GCcooldown.tagReady) { }
             }
-        //}
-        
+
             
+            
+        //}
+
+
     }
+
 }
