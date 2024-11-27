@@ -7,6 +7,7 @@ TagManager:
   - HasDonut
   - Donut
   - NoDonut
+  - Door
   layers:
   - Default
   - TransparentFX

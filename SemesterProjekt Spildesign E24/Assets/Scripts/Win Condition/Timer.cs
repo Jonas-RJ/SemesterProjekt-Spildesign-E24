@@ -6,8 +6,8 @@ using TMPro;
 public class Timer : MonoBehaviour
 {
     //variable for the timer object
-    [SerializeField] TextMeshProUGUI timerText1;
-    [SerializeField] TextMeshProUGUI timerText2;
+    public TextMeshProUGUI timerText1;
+    public TextMeshProUGUI timerText2;
     //variable for the time
     public float remaining1Time;
     public float remaining2Time;
