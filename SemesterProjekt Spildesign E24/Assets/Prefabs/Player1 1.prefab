@@ -217,14 +217,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9616f5b708c02f499ae5b472a1a0100, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _dashMoveSpeed: 15
+  _dashDuration: 0.2
+  _dashCooldown: 5
+  _originalMoveSpeed: 10
+  isDashing: 0
+  _p1CanDash: 0
+  Player1: {fileID: 3874264087909627026}
+  Player2: {fileID: 0}
   _moveSpeed: 10
   _rotationSpeed: 720
-  canDash: 1
-  isDashing: 0
-  dashPower: 0
-  dashTime: 0
-  dashCooldown: 0
   dashTrail: {fileID: 0}
+  walkSound: {fileID: 0}
 --- !u!60 &7458494051928097884
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -292,7 +296,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _timer: {fileID: 0}
-  GCcooldown: {fileID: 0}
   donutIsTaken: 0
   donutIsEat: 0
   canRun: 0
@@ -308,6 +311,7 @@ MonoBehaviour:
   coolDownTime: 5
   prisonerHasDonut: 0
   copHasDonut: 0
+  TouchingSound: {fileID: 0}
 --- !u!60 &3009309918041386285
 PolygonCollider2D:
   m_ObjectHideFlags: 0

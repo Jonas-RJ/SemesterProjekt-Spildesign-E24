@@ -1774,6 +1774,31 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8062281662027088079, guid: 19b83594578d57a48827a134fa18706f, type: 3}
   m_PrefabInstance: {fileID: 2095676010245693208}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &921602592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 921602584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcbc5574be5e04b46b831bec16633dbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _dashMoveSpeed: 30
+  _dashDuration: 0.5
+  _dashCooldown: 5
+  _originalMoveSpeed: 10
+  isDashing: 0
+  _p2CanDash: 0
+  Player1: {fileID: 1154494143}
+  Player2: {fileID: 921602584}
+  _moveSpeed: 10
+  _rotationSpeed: 720
+  _rb: {fileID: 0}
+  _animator: {fileID: 0}
+  walkSound: {fileID: 0}
 --- !u!1 &1011891610 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1506801752164949432, guid: 19b83594578d57a48827a134fa18706f, type: 3}
@@ -2165,7 +2190,8 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 600021c912800e548ac01b87dea4a9f5, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5647920870918371233, guid: a11ffad9cc2d90346b4cfcc6726dbed4, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -5395,7 +5421,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5236892877211161558, guid: 19b83594578d57a48827a134fa18706f, type: 3}
+      insertIndex: 3
+      addedObject: {fileID: 921602592}
   m_SourcePrefab: {fileID: 100100000, guid: 19b83594578d57a48827a134fa18706f, type: 3}
 --- !u!114 &2139052454858605274
 MonoBehaviour:
@@ -5414,6 +5443,7 @@ MonoBehaviour:
   _dashCooldown: 0
   _originalMoveSpeed: 0
   isDashing: 0
+  _p1CanDash: 0
   Player1: {fileID: 0}
   Player2: {fileID: 0}
   _moveSpeed: 10
@@ -12418,6 +12448,7 @@ MonoBehaviour:
   _dashCooldown: 0
   _originalMoveSpeed: 0
   isDashing: 0
+  _p1CanDash: 0
   Player1: {fileID: 0}
   Player2: {fileID: 0}
   _moveSpeed: 10
@@ -14028,6 +14059,10 @@ PrefabInstance:
       propertyPath: Player2
       value: 
       objectReference: {fileID: 921602584}
+    - target: {fileID: 2084357957768543131, guid: 227c80f9ddc3fee498e44df585f5634d, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3338351795546347776, guid: 227c80f9ddc3fee498e44df585f5634d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -13.22
@@ -14108,7 +14143,8 @@ PrefabInstance:
       propertyPath: player2Light
       value: 
       objectReference: {fileID: 1011891610}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1684894968561401582, guid: 227c80f9ddc3fee498e44df585f5634d, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

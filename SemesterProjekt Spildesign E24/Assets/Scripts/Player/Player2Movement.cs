@@ -3,35 +3,35 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerMovement : MonoBehaviour
-{
 
+public class Player2Movement : MonoBehaviour
+{
     //dash settings. We multiply normal move speed by a bonus, and keep a variable that contains the old move speed to change back to
     //we keep gameobjects for the players to be able to refer to them, and only enable dash for one at a time. 
-    [SerializeField] private float _dashMoveSpeed;
-    [SerializeField] private float _dashDuration;
-    [SerializeField] private float _dashCooldown;
-    [SerializeField] private float _originalMoveSpeed;
+    public float _dashMoveSpeed;
+    public float _dashDuration;
+    public float _dashCooldown;
+    public float _originalMoveSpeed;
     public bool isDashing;
-    public bool _p1CanDash = false;
+    public bool _p2CanDash = false;
     public GameObject Player1;
     public GameObject Player2;
 
 
-    [SerializeField] private float _moveSpeed;
-    [SerializeField] private float _rotationSpeed;
+    public float _moveSpeed;
+    public float _rotationSpeed;
 
-    private Rigidbody2D _rb;
+    public Rigidbody2D _rb;
 
 
 
     private Vector2 _movementInput;
     private Vector2 _smoothedMoveInput;
     private Vector2 _smoothMoveVelocity;
-    private Animator _animator;
+    public Animator _animator;
 
 
-    [SerializeField] private TrailRenderer dashTrail;
+    private TrailRenderer dashTrail;
     // private float waitTime;
 
     public AudioSource walkSound;
@@ -39,9 +39,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void Awake()
     {
-       _rb = GetComponent<Rigidbody2D>();
-       dashTrail = GetComponent<TrailRenderer>();
-       _p1CanDash = false;
+        _rb = GetComponent<Rigidbody2D>();
+        dashTrail = GetComponent<TrailRenderer>();
+        _p2CanDash = false;
         _animator = GetComponent<Animator>();
     }
 
@@ -49,19 +49,18 @@ public class PlayerMovement : MonoBehaviour
     {
         bool isMoving = _movementInput != Vector2.zero;
         _animator.SetBool("IsMoving", isMoving);
-        
+
     }
     private void Update()
     {
-        if (Player1.tag == "NoDonut")
+        if (Player2.tag == "NoDonut")
         {
-            _p1CanDash = true;
-        }  
-        if (Player1.tag == "HasDonut")
-        {
-            _p1CanDash = false;
+            _p2CanDash = true;
         }
-        
+        if (Player2.tag == "HasDonut")
+        {
+            _p2CanDash = false;
+        }
         if (isDashing)
         {
             // print("im dashing ");
@@ -71,11 +70,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-       
+
         SetPlayerVelocity();
         RotateInDirectionOfInput();
         SetAnimation();
-        
+
 
     }
 
@@ -101,8 +100,8 @@ public class PlayerMovement : MonoBehaviour
             Quaternion rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, _rotationSpeed * Time.deltaTime);
 
 
-            _rb.MoveRotation(rotation);      
-        
+            _rb.MoveRotation(rotation);
+
         }
     }
 
@@ -110,32 +109,32 @@ public class PlayerMovement : MonoBehaviour
     {
         Debug.Log("Pressed Dash Button");
 
-        if (_p1CanDash)
-        {
-            print("can dash player 1 available");
-            StartCoroutine(Dash1());
-        }
         
-      
+
+        if (_p2CanDash)
+        {
+            print("can dash player 2 available");
+            StartCoroutine(Dash2());
+        }
     }
 
-    private IEnumerator Dash1()
+    
+    private IEnumerator Dash2()
     {
-        _p1CanDash = false; // Sets can dash to false, so as to prevent spam dashing
+        _p2CanDash = false; // Sets can dash to false, so as to prevent spam dashing
         isDashing = true; // Sets isdashing to true, as we are currently running the code for dashing
         _moveSpeed += _dashMoveSpeed; // multiply here
         yield return new WaitForSeconds(_dashDuration); // After the dash duration, removes the above speed changes, so as to go back to normal
         _moveSpeed = _originalMoveSpeed;
         isDashing = false; // As we are no longer dashing, we set it to false (for animation reasons later?)
         yield return new WaitForSeconds(_dashCooldown); // We then wait for the desired cooldown time
-        _p1CanDash = true; // And finally we set canDash to true, so we can dash from the start again.
+        _p2CanDash = true; // And finally we set canDash to true, so we can dash from the start again.
 
-        print("Player 1 dashed");
+        print("Player 2 dashed");
     }
-    
     private void OnMove(InputValue inputValue)
     {
-      _movementInput =  inputValue.Get<Vector2>();
+        _movementInput = inputValue.Get<Vector2>();
         walkSound.Play();
     }
 
@@ -149,5 +148,4 @@ public class PlayerMovement : MonoBehaviour
     }
 
     */
-
 }

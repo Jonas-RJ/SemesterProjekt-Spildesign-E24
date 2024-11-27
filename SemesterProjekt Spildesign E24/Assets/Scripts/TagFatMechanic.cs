@@ -13,7 +13,7 @@ using UnityEngine.Rendering.Universal;
 public class TagFatMechanic : MonoBehaviour
 {
     public Timer _timer;
-    public GameController GCcooldown;
+    //public GameController GCcooldown;
     public bool donutIsTaken = false;
     public bool donutIsEat = false;
     public bool canRun = false;

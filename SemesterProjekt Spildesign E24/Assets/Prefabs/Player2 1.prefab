@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3603480719174473051}
   - component: {fileID: 9209019151775038186}
   - component: {fileID: 2658291761906325583}
-  - component: {fileID: 7353771630151330004}
+  - component: {fileID: -4329383654645934568}
   - component: {fileID: 7732730378235237386}
   - component: {fileID: 2509330164444723131}
   - component: {fileID: 4158532049424295141}
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &7353771630151330004
+--- !u!114 &-4329383654645934568
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -107,17 +107,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 5783275109648798624}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9616f5b708c02f499ae5b472a1a0100, type: 3}
+  m_Script: {fileID: 11500000, guid: dcbc5574be5e04b46b831bec16633dbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _dashMoveSpeed: 15
+  _dashDuration: 0.2
+  _dashCooldown: 5
+  _originalMoveSpeed: 10
+  isDashing: 0
+  _p2CanDash: 0
+  Player1: {fileID: 0}
+  Player2: {fileID: 5783275109648798624}
   _moveSpeed: 10
   _rotationSpeed: 720
-  canDash: 1
-  isDashing: 0
-  dashPower: 0
-  dashTime: 0
-  dashCooldown: 0
-  dashTrail: {fileID: 0}
+  _rb: {fileID: 9209019151775038186}
+  _animator: {fileID: 907357397673865528}
+  walkSound: {fileID: 5683357715345049932}
 --- !u!60 &7732730378235237386
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -183,7 +188,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _timer: {fileID: 0}
-  GCcooldown: {fileID: 0}
   donutIsTaken: 0
   donutIsEat: 0
   canRun: 0
@@ -199,6 +203,7 @@ MonoBehaviour:
   coolDownTime: 5
   prisonerHasDonut: 0
   copHasDonut: 0
+  TouchingSound: {fileID: 0}
 --- !u!60 &4158532049424295141
 PolygonCollider2D:
   m_ObjectHideFlags: 0
