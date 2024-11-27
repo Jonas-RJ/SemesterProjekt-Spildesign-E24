@@ -6,6 +6,19 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
 
+    //dash settings. We multiply normal move speed by a bonus, and keep a variable that contains the old move speed to change back to
+    //we keep gameobjects for the players to be able to refer to them, and only enable dash for one at a time. 
+    [SerializeField] private float _dashMoveSpeed;
+    [SerializeField] private float _dashDuration;
+    [SerializeField] private float _dashCooldown;
+    [SerializeField] private float _originalMoveSpeed;
+    public bool isDashing;
+    bool _p2CanDash = false;
+    bool _p1CanDash = false;
+    public GameObject Player1;
+    public GameObject Player2;
+
+
     [SerializeField] private float _moveSpeed;
     [SerializeField] private float _rotationSpeed;
 
@@ -18,12 +31,12 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 _smoothMoveVelocity;
     private Animator _animator;
 
-    [Header("Dash Variables")]
-    [SerializeField] bool canDash = true;
-    [SerializeField] bool isDashing;
-    [SerializeField] float dashPower;
-    [SerializeField] float dashTime;
-    [SerializeField] float dashCooldown;
+    /*  [Header("Dash Variables")]
+      [SerializeField] bool canDash = true;
+      [SerializeField] bool isDashing;
+      [SerializeField] float dashPower;
+      [SerializeField] float dashTime;
+      [SerializeField] float dashCooldown;  */
     [SerializeField] private TrailRenderer dashTrail;
     private float waitTime;
 
@@ -34,7 +47,8 @@ public class PlayerMovement : MonoBehaviour
     {
        _rb = GetComponent<Rigidbody2D>();
        dashTrail = GetComponent<TrailRenderer>();
-       canDash = true;
+       _p1CanDash = true;
+       _p2CanDash = true;
         _animator = GetComponent<Animator>();
     }
 
@@ -46,9 +60,19 @@ public class PlayerMovement : MonoBehaviour
     }
     private void Update()
     {
-        
-
-        
+        if (Player1.tag == "NoDonut")
+        {
+            _p1CanDash = true;
+        }  
+        if (Player2.tag == "NoDonut")
+        {
+            _p2CanDash = true;
+        }
+        if (isDashing)
+        {
+            // print("im dashing ");
+            return;
+        }
     }
 
     private void FixedUpdate()
@@ -88,9 +112,49 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    public void OnFire(InputValue inputValue)
+    {
+        Debug.Log("Pressed Dash Button");
 
+        if (_p1CanDash)
+        {
+            print("can dash player 1 available");
+            StartCoroutine(Dash1());
+        }
+        
+        if (_p2CanDash)
+        {
+            print("can dash player 1 available");
+            StartCoroutine(Dash2());
+        }
+    }
 
+    private IEnumerator Dash1()
+    {
+        _p1CanDash = false; // Sets can dash to false, so as to prevent spam dashing
+        isDashing = true; // Sets isdashing to true, as we are currently running the code for dashing
+        _moveSpeed += _dashMoveSpeed; // multiply here
+        yield return new WaitForSeconds(_dashDuration); // After the dash duration, removes the above speed changes, so as to go back to normal
+        _moveSpeed = _originalMoveSpeed;
+        isDashing = false; // As we are no longer dashing, we set it to false (for animation reasons later?)
+        yield return new WaitForSeconds(_dashCooldown); // We then wait for the desired cooldown time
+        _p1CanDash = true; // And finally we set canDash to true, so we can dash from the start again.
 
+        print("coroutine started");
+    }
+    private IEnumerator Dash2()
+    {
+        _p2CanDash = false; // Sets can dash to false, so as to prevent spam dashing
+        isDashing = true; // Sets isdashing to true, as we are currently running the code for dashing
+        _moveSpeed += _dashMoveSpeed; // multiply here
+        yield return new WaitForSeconds(_dashDuration); // After the dash duration, removes the above speed changes, so as to go back to normal
+        _moveSpeed = _originalMoveSpeed;
+        isDashing = false; // As we are no longer dashing, we set it to false (for animation reasons later?)
+        yield return new WaitForSeconds(_dashCooldown); // We then wait for the desired cooldown time
+        _p2CanDash = true; // And finally we set canDash to true, so we can dash from the start again.
+
+        print("coroutine started");
+    }
     private void OnMove(InputValue inputValue)
     {
       _movementInput =  inputValue.Get<Vector2>();
