@@ -16,6 +16,7 @@ public class Player2Movement : MonoBehaviour
     public bool _p2CanDash = false;
     public GameObject Player1;
     public GameObject Player2;
+    public AudioSource dashSound;
 
 
     public float _moveSpeed;
@@ -115,6 +116,7 @@ public class Player2Movement : MonoBehaviour
         {
             print("can dash player 2 available");
             StartCoroutine(Dash2());
+            dashSound.Play();
         }
     }
 
