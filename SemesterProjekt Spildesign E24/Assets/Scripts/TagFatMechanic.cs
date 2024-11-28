@@ -136,7 +136,6 @@ public class TagFatMechanic : MonoBehaviour
             print("donutcollision");
             _timer.canRun = true;
 
-
             // Disse to variabler eksisterer kun for at de kan blive brugt i MusicController scriptet til at spille lyden.
             prisonerHasDonut = false;
             copHasDonut = true;
