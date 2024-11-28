@@ -155,6 +155,7 @@ MonoBehaviour:
   donuttag: {fileID: 0}
   canRun: 0
   orange: {r: 1, g: 0.64, b: 0, a: 1}
+  eatDonut: {fileID: 0}
 --- !u!1 &998261895470097197
 GameObject:
   m_ObjectHideFlags: 0
@@ -1325,3 +1326,4 @@ MonoBehaviour:
   donuttag: {fileID: 0}
   canRun: 0
   orange: {r: 1, g: 0.64, b: 0, a: 1}
+  eatDonut: {fileID: 0}
