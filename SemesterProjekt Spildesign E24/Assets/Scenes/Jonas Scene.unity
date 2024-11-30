@@ -205,6 +205,7 @@ MonoBehaviour:
   Player2: {fileID: 0}
   WallOpen: {fileID: 45584815}
   WallClose: {fileID: 383929609}
+  wallGoThrough: {fileID: 0}
 --- !u!61 &45584818
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -738,6 +739,7 @@ MonoBehaviour:
   Player2: {fileID: 0}
   WallOpen: {fileID: 1428089397}
   WallClose: {fileID: 1905375589}
+  wallGoThrough: {fileID: 0}
 --- !u!61 &269599083
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1374,6 +1376,7 @@ MonoBehaviour:
   Player2: {fileID: 921602584}
   WallOpen: {fileID: 1053042676}
   WallClose: {fileID: 34860691}
+  wallGoThrough: {fileID: 0}
 --- !u!61 &676916165
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1859,6 +1862,7 @@ MonoBehaviour:
   Player2: {fileID: 921602584}
   WallOpen: {fileID: 256059711}
   WallClose: {fileID: 1622903319}
+  wallGoThrough: {fileID: 0}
 --- !u!61 &1034713078
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2310,6 +2314,7 @@ MonoBehaviour:
   Player2: {fileID: 0}
   WallOpen: {fileID: 45584815}
   WallClose: {fileID: 383929609}
+  wallGoThrough: {fileID: 0}
 --- !u!61 &1191944812
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2477,6 +2482,7 @@ MonoBehaviour:
   Player2: {fileID: 0}
   WallOpen: {fileID: 1428089397}
   WallClose: {fileID: 1905375589}
+  wallGoThrough: {fileID: 0}
 --- !u!61 &1428089400
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2627,6 +2633,7 @@ MonoBehaviour:
   Player2: {fileID: 921602584}
   WallOpen: {fileID: 1170187591}
   WallClose: {fileID: 467836756}
+  wallGoThrough: {fileID: 0}
 --- !u!61 &1454121122
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2935,6 +2942,90 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!1 &1725649155
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1725649157}
+  - component: {fileID: 1725649156}
+  m_Layer: 0
+  m_Name: DonutsSliders_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &1725649156
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1725649155}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: -181534962, guid: 64b6987402a05634694a950a198dbf07, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.31, y: 0.08}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 0
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1725649157
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1725649155}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.5010333, y: -5.169629, z: 0}
+  m_LocalScale: {x: 26.144, y: 26.144, z: 26.144}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1802440178
 GameObject:
   m_ObjectHideFlags: 0
@@ -3362,6 +3453,7 @@ MonoBehaviour:
   Player2: {fileID: 921602584}
   WallOpen: {fileID: 1802440178}
   WallClose: {fileID: 1981092565}
+  wallGoThrough: {fileID: 0}
 --- !u!61 &1946909935
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3801,6 +3893,7 @@ MonoBehaviour:
   Player2: {fileID: 921602584}
   WallOpen: {fileID: 450958894}
   WallClose: {fileID: 1190294113}
+  wallGoThrough: {fileID: 0}
 --- !u!33 &57871950712045470
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -4044,6 +4137,7 @@ MonoBehaviour:
   Player2: {fileID: 0}
   WallOpen: {fileID: 1403108368508808140}
   WallClose: {fileID: 890803157521216784}
+  wallGoThrough: {fileID: 0}
 --- !u!50 &319661748742541540
 Rigidbody2D:
   serializedVersion: 4
@@ -4088,6 +4182,7 @@ MonoBehaviour:
   Player2: {fileID: 0}
   WallOpen: {fileID: 1405306815482423317}
   WallClose: {fileID: 911051462455506633}
+  wallGoThrough: {fileID: 0}
 --- !u!1 &378063130901118088
 GameObject:
   m_ObjectHideFlags: 0
@@ -4692,6 +4787,7 @@ MonoBehaviour:
   Player2: {fileID: 0}
   WallOpen: {fileID: 378063130901118088}
   WallClose: {fileID: 1881155586868453972}
+  wallGoThrough: {fileID: 0}
 --- !u!4 &1353589248929753107
 Transform:
   m_ObjectHideFlags: 0
@@ -5056,6 +5152,7 @@ MonoBehaviour:
   Player2: {fileID: 0}
   WallOpen: {fileID: 6731684961624272123}
   WallClose: {fileID: 4778227595067355687}
+  wallGoThrough: {fileID: 0}
 --- !u!33 &1624091445040324076
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -6482,6 +6579,7 @@ MonoBehaviour:
   Player2: {fileID: 0}
   WallOpen: {fileID: 4212015333171112372}
   WallClose: {fileID: 2688656404019476328}
+  wallGoThrough: {fileID: 0}
 --- !u!114 &3323285561160107065
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6515,6 +6613,7 @@ MonoBehaviour:
   Player2: {fileID: 0}
   WallOpen: {fileID: 4171626416804256744}
   WallClose: {fileID: 2792385149562619188}
+  wallGoThrough: {fileID: 0}
 --- !u!61 &3438731732203790418
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6973,6 +7072,7 @@ MonoBehaviour:
   Player2: {fileID: 0}
   WallOpen: {fileID: 9029139680222868642}
   WallClose: {fileID: 7091447386329852542}
+  wallGoThrough: {fileID: 0}
 --- !u!23 &3915624838264684181
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7527,6 +7627,7 @@ MonoBehaviour:
   Player2: {fileID: 0}
   WallOpen: {fileID: 2913702725556113910}
   WallClose: {fileID: 3984452366192430890}
+  wallGoThrough: {fileID: 0}
 --- !u!222 &4571511255559830919
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12810,6 +12911,7 @@ MonoBehaviour:
   Player2: {fileID: 0}
   WallOpen: {fileID: 6731684961624272123}
   WallClose: {fileID: 4778227595067355687}
+  wallGoThrough: {fileID: 0}
 --- !u!61 &5364530819235803037
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12985,6 +13087,7 @@ MonoBehaviour:
   Player2: {fileID: 0}
   WallOpen: {fileID: 378063130901118088}
   WallClose: {fileID: 1881155586868453972}
+  wallGoThrough: {fileID: 0}
 --- !u!1 &5653636060549150880
 GameObject:
   m_ObjectHideFlags: 0
@@ -13569,6 +13672,7 @@ MonoBehaviour:
   Player2: {fileID: 0}
   WallOpen: {fileID: 1403108368508808140}
   WallClose: {fileID: 890803157521216784}
+  wallGoThrough: {fileID: 0}
 --- !u!114 &6378516812997725371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13586,6 +13690,7 @@ MonoBehaviour:
   Player2: {fileID: 0}
   WallOpen: {fileID: 1405306815482423317}
   WallClose: {fileID: 911051462455506633}
+  wallGoThrough: {fileID: 0}
 --- !u!114 &6444729095092952501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13599,7 +13704,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _timer: {fileID: 2241038170212033818}
-  GCcooldown: {fileID: 0}
   donutIsTaken: 0
   donutIsEat: 0
   canRun: 0
@@ -14570,6 +14674,7 @@ MonoBehaviour:
   Player2: {fileID: 0}
   WallOpen: {fileID: 2913702725556113910}
   WallClose: {fileID: 3984452366192430890}
+  wallGoThrough: {fileID: 0}
 --- !u!156049354 &7172849321075952165
 Grid:
   m_ObjectHideFlags: 0
@@ -14955,6 +15060,7 @@ MonoBehaviour:
   Player2: {fileID: 0}
   WallOpen: {fileID: 9029139680222868642}
   WallClose: {fileID: 7091447386329852542}
+  wallGoThrough: {fileID: 0}
 --- !u!4 &7670766836569129509
 Transform:
   m_ObjectHideFlags: 0
@@ -15489,6 +15595,7 @@ MonoBehaviour:
   Player2: {fileID: 0}
   WallOpen: {fileID: 4212015333171112372}
   WallClose: {fileID: 2688656404019476328}
+  wallGoThrough: {fileID: 0}
 --- !u!61 &8186856313271129726
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15585,6 +15692,7 @@ MonoBehaviour:
   Player2: {fileID: 0}
   WallOpen: {fileID: 4171626416804256744}
   WallClose: {fileID: 2792385149562619188}
+  wallGoThrough: {fileID: 0}
 --- !u!1 &8295693914544862941
 GameObject:
   m_ObjectHideFlags: 0
@@ -15796,7 +15904,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _timer: {fileID: 2241038170212033818}
-  GCcooldown: {fileID: 0}
   donutIsTaken: 0
   donutIsEat: 0
   canRun: 0
@@ -16248,3 +16355,4 @@ SceneRoots:
   m_Roots:
   - {fileID: 218158224}
   - {fileID: 7114039720930475119}
+  - {fileID: 1725649157}
