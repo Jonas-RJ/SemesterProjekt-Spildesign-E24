@@ -523,7 +523,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 460dc360303aef04088e71c0048b3569, type: 3}
+  m_Actions: {fileID: -944628639613478452, guid: 023ba59153a642f49a6c6ff40e960e3d, type: 3}
   m_NotificationBehavior: 0
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
@@ -1448,7 +1448,7 @@ Transform:
   m_GameObject: {fileID: 1256179189355227972}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.46468, y: -4.6453047, z: 0.009114731}
+  m_LocalPosition: {x: -10.46468, y: -5.64, z: 0.009114731}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2868,8 +2868,8 @@ Transform:
   m_GameObject: {fileID: 2237535810842080046}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 14.59, y: 0.22999954, z: 0.009114731}
-  m_LocalScale: {x: 20.324234, y: 4.851219, z: 1}
+  m_LocalPosition: {x: 16.7157, y: 0.22999954, z: 0.009114731}
+  m_LocalScale: {x: 20.324234, y: 9.102828, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4479560174504667774}
@@ -3042,7 +3042,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: -3
   m_Sprite: {fileID: -1521568283, guid: 4575c7eb66a5a824eae31b2727342752, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3103,8 +3103,8 @@ Transform:
   m_GameObject: {fileID: 2803685633701861306}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -14.7041, y: 0.07999992, z: 0.009114731}
-  m_LocalScale: {x: 20.324234, y: 4.219967, z: 1}
+  m_LocalPosition: {x: -15.633, y: 0.07999992, z: 0.009114731}
+  m_LocalScale: {x: 20.324234, y: 6.077596, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4479560174504667774}
@@ -8864,7 +8864,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -4
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -9110,7 +9110,7 @@ Transform:
   m_GameObject: {fileID: 7184343106063618936}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.12532043, y: -8.8453045, z: 0.009114731}
+  m_LocalPosition: {x: 0.12532043, y: -8.71, z: 0.009114731}
   m_LocalScale: {x: 28.19988, y: 0.9717828, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9664,7 +9664,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: -3
   m_Sprite: {fileID: -142722309, guid: d02d1c0f5b8a3d94eb798a2f7451579d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -10753,6 +10753,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6875699117814470580}
     m_Modifications:
+    - target: {fileID: 2825484960745137631, guid: a11ffad9cc2d90346b4cfcc6726dbed4, type: 3}
+      propertyPath: m_SortingOrder
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4906666368617681177, guid: a11ffad9cc2d90346b4cfcc6726dbed4, type: 3}
+      propertyPath: m_SortingOrder
+      value: -2
+      objectReference: {fileID: 0}
     - target: {fileID: 5166686493500432289, guid: a11ffad9cc2d90346b4cfcc6726dbed4, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.405047
@@ -10808,6 +10816,14 @@ PrefabInstance:
     - target: {fileID: 5217227894492628602, guid: a11ffad9cc2d90346b4cfcc6726dbed4, type: 3}
       propertyPath: m_Name
       value: DoorManager (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6153218698368122447, guid: a11ffad9cc2d90346b4cfcc6726dbed4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9159761156354380493, guid: a11ffad9cc2d90346b4cfcc6726dbed4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10901,6 +10917,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6875699117814470580}
     m_Modifications:
+    - target: {fileID: 2825484960745137631, guid: a11ffad9cc2d90346b4cfcc6726dbed4, type: 3}
+      propertyPath: m_SortingOrder
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4906666368617681177, guid: a11ffad9cc2d90346b4cfcc6726dbed4, type: 3}
+      propertyPath: m_SortingOrder
+      value: -2
+      objectReference: {fileID: 0}
     - target: {fileID: 5166686493500432289, guid: a11ffad9cc2d90346b4cfcc6726dbed4, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.2743883
@@ -10957,6 +10981,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoorManager (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 6153218698368122447, guid: a11ffad9cc2d90346b4cfcc6726dbed4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9159761156354380493, guid: a11ffad9cc2d90346b4cfcc6726dbed4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10975,6 +11007,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6875699117814470580}
     m_Modifications:
+    - target: {fileID: 2825484960745137631, guid: a11ffad9cc2d90346b4cfcc6726dbed4, type: 3}
+      propertyPath: m_SortingOrder
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4906666368617681177, guid: a11ffad9cc2d90346b4cfcc6726dbed4, type: 3}
+      propertyPath: m_SortingOrder
+      value: -2
+      objectReference: {fileID: 0}
     - target: {fileID: 5166686493500432289, guid: a11ffad9cc2d90346b4cfcc6726dbed4, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.5
@@ -11031,6 +11071,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoorManager (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6153218698368122447, guid: a11ffad9cc2d90346b4cfcc6726dbed4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9159761156354380493, guid: a11ffad9cc2d90346b4cfcc6726dbed4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11049,6 +11097,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6875699117814470580}
     m_Modifications:
+    - target: {fileID: 2825484960745137631, guid: a11ffad9cc2d90346b4cfcc6726dbed4, type: 3}
+      propertyPath: m_SortingOrder
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4906666368617681177, guid: a11ffad9cc2d90346b4cfcc6726dbed4, type: 3}
+      propertyPath: m_SortingOrder
+      value: -2
+      objectReference: {fileID: 0}
     - target: {fileID: 5166686493500432289, guid: a11ffad9cc2d90346b4cfcc6726dbed4, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.4350572
@@ -11104,6 +11160,14 @@ PrefabInstance:
     - target: {fileID: 5217227894492628602, guid: a11ffad9cc2d90346b4cfcc6726dbed4, type: 3}
       propertyPath: m_Name
       value: DoorManager (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6153218698368122447, guid: a11ffad9cc2d90346b4cfcc6726dbed4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9159761156354380493, guid: a11ffad9cc2d90346b4cfcc6726dbed4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11271,6 +11335,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6875699117814470580}
     m_Modifications:
+    - target: {fileID: 2825484960745137631, guid: a11ffad9cc2d90346b4cfcc6726dbed4, type: 3}
+      propertyPath: m_SortingOrder
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4906666368617681177, guid: a11ffad9cc2d90346b4cfcc6726dbed4, type: 3}
+      propertyPath: m_SortingOrder
+      value: -2
+      objectReference: {fileID: 0}
     - target: {fileID: 5166686493500432289, guid: a11ffad9cc2d90346b4cfcc6726dbed4, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.1390493
@@ -11289,7 +11361,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5166686493500432289, guid: a11ffad9cc2d90346b4cfcc6726dbed4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.97999954
+      value: -0.83
       objectReference: {fileID: 0}
     - target: {fileID: 5166686493500432289, guid: a11ffad9cc2d90346b4cfcc6726dbed4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -11326,6 +11398,14 @@ PrefabInstance:
     - target: {fileID: 5217227894492628602, guid: a11ffad9cc2d90346b4cfcc6726dbed4, type: 3}
       propertyPath: m_Name
       value: DoorManager (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6153218698368122447, guid: a11ffad9cc2d90346b4cfcc6726dbed4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9159761156354380493, guid: a11ffad9cc2d90346b4cfcc6726dbed4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11419,6 +11499,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6875699117814470580}
     m_Modifications:
+    - target: {fileID: 2825484960745137631, guid: a11ffad9cc2d90346b4cfcc6726dbed4, type: 3}
+      propertyPath: m_SortingOrder
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4906666368617681177, guid: a11ffad9cc2d90346b4cfcc6726dbed4, type: 3}
+      propertyPath: m_SortingOrder
+      value: -2
+      objectReference: {fileID: 0}
     - target: {fileID: 5166686493500432289, guid: a11ffad9cc2d90346b4cfcc6726dbed4, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.1151339
@@ -11475,6 +11563,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoorManager (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 6153218698368122447, guid: a11ffad9cc2d90346b4cfcc6726dbed4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9159761156354380493, guid: a11ffad9cc2d90346b4cfcc6726dbed4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11493,6 +11589,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6875699117814470580}
     m_Modifications:
+    - target: {fileID: 2825484960745137631, guid: a11ffad9cc2d90346b4cfcc6726dbed4, type: 3}
+      propertyPath: m_SortingOrder
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4906666368617681177, guid: a11ffad9cc2d90346b4cfcc6726dbed4, type: 3}
+      propertyPath: m_SortingOrder
+      value: -2
+      objectReference: {fileID: 0}
     - target: {fileID: 5166686493500432289, guid: a11ffad9cc2d90346b4cfcc6726dbed4, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.4096006
@@ -11548,6 +11652,14 @@ PrefabInstance:
     - target: {fileID: 5217227894492628602, guid: a11ffad9cc2d90346b4cfcc6726dbed4, type: 3}
       propertyPath: m_Name
       value: DoorManager (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6153218698368122447, guid: a11ffad9cc2d90346b4cfcc6726dbed4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9159761156354380493, guid: a11ffad9cc2d90346b4cfcc6726dbed4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11789,6 +11901,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6875699117814470580}
     m_Modifications:
+    - target: {fileID: 2825484960745137631, guid: a11ffad9cc2d90346b4cfcc6726dbed4, type: 3}
+      propertyPath: m_SortingOrder
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4906666368617681177, guid: a11ffad9cc2d90346b4cfcc6726dbed4, type: 3}
+      propertyPath: m_SortingOrder
+      value: -2
+      objectReference: {fileID: 0}
     - target: {fileID: 5166686493500432289, guid: a11ffad9cc2d90346b4cfcc6726dbed4, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.4350573
@@ -11844,6 +11964,14 @@ PrefabInstance:
     - target: {fileID: 5217227894492628602, guid: a11ffad9cc2d90346b4cfcc6726dbed4, type: 3}
       propertyPath: m_Name
       value: DoorManager (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6153218698368122447, guid: a11ffad9cc2d90346b4cfcc6726dbed4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9159761156354380493, guid: a11ffad9cc2d90346b4cfcc6726dbed4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
