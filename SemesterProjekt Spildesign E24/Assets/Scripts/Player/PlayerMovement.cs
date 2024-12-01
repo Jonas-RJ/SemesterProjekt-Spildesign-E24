@@ -30,6 +30,8 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 _smoothMoveVelocity;
     private Animator _animator;
 
+    public AudioSource dashSound;
+
 
     [SerializeField] private TrailRenderer dashTrail;
     // private float waitTime;
@@ -144,6 +146,7 @@ public class PlayerMovement : MonoBehaviour
         {
             print("can dash player 1 available");
             StartCoroutine(Dash1());
+            dashSound.Play();
         }
         
       

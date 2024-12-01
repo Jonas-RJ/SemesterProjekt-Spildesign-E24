@@ -42,49 +42,49 @@ public class TimerSpriteChanger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Timer1.timerText1.text == "00:36")
+        if (Timer1.timerText1.text == "00:35")
         {
             // Set sprite
             copBar2.gameObject.SetActive(true);
             copBar1.gameObject.SetActive(false);
         }
-        if (Timer1.timerText1.text == "00:31")
+        if (Timer1.timerText1.text == "00:30")
         {
             // Set sprite
             copBar3.gameObject.SetActive(true);
             copBar2.gameObject.SetActive(false);
         }
-        if (Timer1.timerText1.text == "00:26")
+        if (Timer1.timerText1.text == "00:25")
         {
             // Set sprite
             copBar4.gameObject.SetActive(true);
             copBar3.gameObject.SetActive(false);
         }
-        if (Timer1.timerText1.text == "00:21")
+        if (Timer1.timerText1.text == "00:20")
         {
             // Set sprite
             copBar5.gameObject.SetActive(true);
             copBar4.gameObject.SetActive(false);
         }
-        if (Timer1.timerText1.text == "00:16")
+        if (Timer1.timerText1.text == "00:15")
         {
             // Set sprite
             copBar6.gameObject.SetActive(true);
             copBar5.gameObject.SetActive(false);
         }
-        if (Timer1.timerText1.text == "00:11")
+        if (Timer1.timerText1.text == "00:10")
         {
             // Set sprite
             copBar7.gameObject.SetActive(true);
             copBar6.gameObject.SetActive(false);
         }
-        if (Timer1.timerText1.text == "00:06")
+        if (Timer1.timerText1.text == "00:05")
         {
             // Set sprite
             copBar8.gameObject.SetActive(true);
             copBar7.gameObject.SetActive(false);
         }
-        if (Timer1.timerText1.text == "00:01")
+        if (Timer1.timerText1.text == "00:00")
         {
             // Set sprite
             copBar9.gameObject.SetActive(true);
@@ -96,49 +96,49 @@ public class TimerSpriteChanger : MonoBehaviour
 
 
 
-        if (Timer2.timerText1.text == "00:36")
+        if (Timer2.timerText2.text == "00:35")
         {
             // Set sprite
             prisonerBar2.gameObject.SetActive(true);
             prisonerBar1.gameObject.SetActive(false);
         }
-        if (Timer2.timerText1.text == "00:31")
+        if (Timer2.timerText2.text == "00:30")
         {
             // Set sprite
             prisonerBar3.gameObject.SetActive(true);
             prisonerBar2.gameObject.SetActive(false);
         }
-        if (Timer2.timerText1.text == "00:26")
+        if (Timer2.timerText2.text == "00:25")
         {
             // Set sprite
             prisonerBar4.gameObject.SetActive(true);
             prisonerBar3.gameObject.SetActive(false);
         }
-        if (Timer2.timerText1.text == "00:21")
+        if (Timer2.timerText2.text == "00:20")
         {
             // Set sprite
             prisonerBar5.gameObject.SetActive(true);
             prisonerBar4.gameObject.SetActive(false);
         }
-        if (Timer2.timerText1.text == "00:16")
+        if (Timer2.timerText2.text == "00:15")
         {
             // Set sprite
             prisonerBar6.gameObject.SetActive(true);
             prisonerBar5.gameObject.SetActive(false);
         }
-        if (Timer2.timerText1.text == "00:11")
+        if (Timer2.timerText2.text == "00:10")
         {
             // Set sprite
             prisonerBar7.gameObject.SetActive(true);
             prisonerBar6.gameObject.SetActive(false);
         }
-        if (Timer2.timerText1.text == "00:06")
+        if (Timer2.timerText2.text == "00:05")
         {
             // Set sprite
             prisonerBar8.gameObject.SetActive(true);
             prisonerBar7.gameObject.SetActive(false);
         }
-        if (Timer2.timerText1.text == "00:01")
+        if (Timer2.timerText2.text == "00:00")
         {
             // Set sprite
             prisonerBar9.gameObject.SetActive(true);
