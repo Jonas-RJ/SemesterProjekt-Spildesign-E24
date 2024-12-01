@@ -41,8 +41,8 @@ public class Timer : MonoBehaviour
                 //Stops the timer when it reaches 0 and turns it green
                 remaining1Time = 0;
                 GameOverScreen.GameOver();
-                timerText1.color = Color.green;
-                timerText2.color = Color.red;
+                //timerText1.color = Color.green;
+                //timerText2.color = Color.red;
                 //Display player wins for den spiller der vinder
             }
 
@@ -58,10 +58,11 @@ public class Timer : MonoBehaviour
                 //Stops the timer when it reaches 0 and turns it green
                 remaining2Time = 0;
                 GameOverScreen.GameOver();
-                timerText2.color = Color.green;
-                timerText1.color = Color.red;
+                //timerText2.color = Color.green;
+                //timerText1.color = Color.red;
                 //Display player wins for den spiller der vinder
             }
+
             //Divides the number elapsed time into minutes and seconds
             int minutes1 = Mathf.FloorToInt(remaining1Time / 60);
             int seconds1 = Mathf.FloorToInt(remaining1Time % 60);
