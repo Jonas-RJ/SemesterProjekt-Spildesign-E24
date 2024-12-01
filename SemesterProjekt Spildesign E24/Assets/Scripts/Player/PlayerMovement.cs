@@ -53,6 +53,36 @@ public class PlayerMovement : MonoBehaviour
         _animator.SetBool("IsMoving", isMoving);
         
     }
+    private void Animation_AnimationWithDonut()
+    {
+        bool isMoving = _movementInput != Vector2.zero;
+        bool WithDonat = Player1.tag == "HasDonat";
+
+        _animator.SetBool("IsMoving", isMoving);
+        _animator.SetBool("WithDonat", WithDonat);
+
+        if (Player1.tag == "HasDonut" && isMoving)
+        {
+            WithDonat = true;
+            isMoving = true;
+        }
+        if (Player1.tag == "NoDonut" && isMoving)
+        {
+            WithDonat = false;
+            isMoving = true;
+        }
+        if (Player1.tag == "HasDonut" && isMoving)
+        {
+            WithDonat = true;
+            isMoving = false;
+        }
+        if (Player1.tag == "NoDonut" && isMoving)
+        {
+            WithDonat = false;
+            isMoving = false;
+        }
+    }
+
     private void Update()
     {
         if (Player1.tag == "NoDonut")
@@ -136,7 +166,7 @@ public class PlayerMovement : MonoBehaviour
         print("Player 1 dashed");
     }
     
-    private void OnMove(InputValue inputValue)
+    /*private void OnMove(InputValue inputValue)
     {
       _movementInput =  inputValue.Get<Vector2>();
         walkSound.Play();
