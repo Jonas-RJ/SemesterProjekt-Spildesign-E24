@@ -51,10 +51,10 @@ public class GameOverScreen : MonoBehaviour
     //Loader vores spil scene ved tryk af restart knap som vi giver denne method
     public void RestartButton()
     {
-        SceneManager.LoadScene("GameTestScene");
+        //SceneManager.LoadScene("GameTestScene");
         mapSelector = Random.Range(0, 5);
         print(mapSelector);
-
+        gameObject.SetActive(false);
         switch (mapSelector)
         {
             case 0:
