@@ -47,40 +47,12 @@ public class PlayerMovement : MonoBehaviour
         _animator = GetComponent<Animator>();
     }
 
-    public void SetAnimation()
+    private void SetAnimation()
     {
         bool isMoving = _movementInput != Vector2.zero;
-        _animator.SetBool("IsMoving", isMoving);
-        
-    }
-    private void Animation_AnimationWithDonut()
-    {
-        bool isMoving = _movementInput != Vector2.zero;
-        bool WithDonat = Player1.tag == "HasDonat";
-
-        _animator.SetBool("IsMoving", isMoving);
-        _animator.SetBool("WithDonat", WithDonat);
-
-        if (Player1.tag == "HasDonut" && isMoving)
-        {
-            WithDonat = true;
-            isMoving = true;
-        }
-        if (Player1.tag == "NoDonut" && isMoving)
-        {
-            WithDonat = false;
-            isMoving = true;
-        }
-        if (Player1.tag == "HasDonut" && isMoving)
-        {
-            WithDonat = true;
-            isMoving = false;
-        }
-        if (Player1.tag == "NoDonut" && isMoving)
-        {
-            WithDonat = false;
-            isMoving = false;
-        }
+        bool WithDonut = Player2.tag == "HasDonut";
+        _animator.SetBool("isMoving", isMoving);
+        _animator.SetBool("WithDonut", WithDonut);
     }
 
     private void Update()

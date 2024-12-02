@@ -49,7 +49,9 @@ public class Player2Movement : MonoBehaviour
     public void SetAnimation()
     {
         bool isMoving = _movementInput != Vector2.zero;
-        _animator.SetBool("IsMoving", isMoving);
+        bool WithDonut = Player2.tag == "HasDonut";
+        _animator.SetBool("isMoving", isMoving);
+        _animator.SetBool("WithDonut", WithDonut);
 
     }
     private void Update()
