@@ -37,6 +37,8 @@ public class Player2Movement : MonoBehaviour
 
     public AudioSource walkSound;
 
+    public AudioSource dashReadySound;
+
 
     private void Awake()
     {
@@ -133,6 +135,7 @@ public class Player2Movement : MonoBehaviour
         isDashing = false; // As we are no longer dashing, we set it to false (for animation reasons later?)
         yield return new WaitForSeconds(_dashCooldown); // We then wait for the desired cooldown time
         _p2CanDash = true; // And finally we set canDash to true, so we can dash from the start again.
+        dashReadySound.Play();
 
         print("Player 2 dashed");
     }

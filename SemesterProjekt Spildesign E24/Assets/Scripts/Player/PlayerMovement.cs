@@ -38,6 +38,8 @@ public class PlayerMovement : MonoBehaviour
 
     public AudioSource walkSound;
 
+    public AudioSource dashReadySound;
+
 
     private void Awake()
     {
@@ -71,6 +73,7 @@ public class PlayerMovement : MonoBehaviour
             // print("im dashing ");
             return;
         }
+
     }
 
     private void FixedUpdate()
@@ -134,6 +137,7 @@ public class PlayerMovement : MonoBehaviour
         isDashing = false; // As we are no longer dashing, we set it to false (for animation reasons later?)
         yield return new WaitForSeconds(_dashCooldown); // We then wait for the desired cooldown time
         _p1CanDash = true; // And finally we set canDash to true, so we can dash from the start again.
+        dashReadySound.Play();
 
         print("Player 1 dashed");
     }
