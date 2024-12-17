@@ -10,33 +10,25 @@ public class Player2Movement : MonoBehaviour
     //we keep gameobjects for the players to be able to refer to them, and only enable dash for one at a time. 
     public float _dashMoveSpeed;
     public float _dashDuration;
-    public float _dashCooldown;
+    public float _dashCooldown = 5f;
     public float _originalMoveSpeed;
     public bool isDashing;
-    public bool _p2CanDash = false;
+    public bool canDash = false;
+
     public GameObject Player1;
     public GameObject Player2;
+    public GameObject OtherPlayer;
     public AudioSource dashSound;
-
-
     public float _moveSpeed;
     public float _rotationSpeed;
 
     public Rigidbody2D _rb;
-
-
-
     private Vector2 _movementInput;
     private Vector2 _smoothedMoveInput;
     private Vector2 _smoothMoveVelocity;
     public Animator _animator;
-
-
-    private TrailRenderer dashTrail;
-    // private float waitTime;
-
+    [SerializeField] private TrailRenderer dashTrail;
     public AudioSource walkSound;
-
     public AudioSource dashReadySound;
 
 
@@ -44,7 +36,7 @@ public class Player2Movement : MonoBehaviour
     {
         _rb = GetComponent<Rigidbody2D>();
         dashTrail = GetComponent<TrailRenderer>();
-        _p2CanDash = false;
+     //   _p2CanDash = false;
         _animator = GetComponent<Animator>();
     }
 
@@ -52,35 +44,30 @@ public class Player2Movement : MonoBehaviour
     {
         bool isMoving = _movementInput != Vector2.zero;
         bool WithDonut = Player2.tag == "HasDonut";
+        bool WithDonutCop = Player1.tag == "HasDonut";
         _animator.SetBool("isMoving", isMoving);
         _animator.SetBool("WithDonut", WithDonut);
+        _animator.SetBool("WithDonutCop", WithDonutCop);
 
     }
     private void Update()
     {
-        if (Player2.tag == "NoDonut")
+
+        if (gameObject.tag == "NoDonut" && OtherPlayer.tag == "HasDonut" ) 
         {
-            _p2CanDash = true;
+            canDash = true;
         }
-        if (Player2.tag == "HasDonut")
+        else if (gameObject.tag == "HasDonut" && OtherPlayer.tag == "NoDonut")
         {
-            _p2CanDash = false;
-        }
-        if (isDashing)
-        {
-            // print("im dashing ");
-            return;
+            canDash = false;
         }
     }
 
     private void FixedUpdate()
     {
-
         SetPlayerVelocity();
         RotateInDirectionOfInput();
         SetAnimation();
-
-
     }
 
     private void SetPlayerVelocity()
@@ -116,10 +103,10 @@ public class Player2Movement : MonoBehaviour
 
         
 
-        if (_p2CanDash)
+        if (canDash && !isDashing)
         {
-            print("can dash player 2 available");
-            StartCoroutine(Dash2());
+             StartCoroutine(Dash2());
+
             dashSound.Play();
         }
     }
@@ -127,18 +114,18 @@ public class Player2Movement : MonoBehaviour
     
     private IEnumerator Dash2()
     {
-        _p2CanDash = false; // Sets can dash to false, so as to prevent spam dashing
+     // Sets can dash to false, so as to prevent spam dashing
         isDashing = true; // Sets isdashing to true, as we are currently running the code for dashing
         _moveSpeed += _dashMoveSpeed; // multiply here
         yield return new WaitForSeconds(_dashDuration); // After the dash duration, removes the above speed changes, so as to go back to normal
         _moveSpeed = _originalMoveSpeed;
-        isDashing = false; // As we are no longer dashing, we set it to false (for animation reasons later?)
         yield return new WaitForSeconds(_dashCooldown); // We then wait for the desired cooldown time
-        _p2CanDash = true; // And finally we set canDash to true, so we can dash from the start again.
+       // And finally we set canDash to true, so we can dash from the start again.
         dashReadySound.Play();
+        isDashing = false; // As we are no longer dashing, we set it to false (for animation reasons later?)
 
-        print("Player 2 dashed");
     }
+
     private void OnMove(InputValue inputValue)
     {
         _movementInput = inputValue.Get<Vector2>();
@@ -146,13 +133,5 @@ public class Player2Movement : MonoBehaviour
     }
 
 
-    /*
-    private void OnFire(InputValue inputValue)
-    {
-      
-        Debug.Log("Pressed Dash Button");
-        
-    }
-
-    */
+    
 }

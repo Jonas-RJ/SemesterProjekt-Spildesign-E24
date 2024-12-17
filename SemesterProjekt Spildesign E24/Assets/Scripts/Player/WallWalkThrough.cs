@@ -20,7 +20,7 @@ public class WallWalkThrough : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        print("Wall works now");
+    //    print("Wall works now");
 
         Invoke("wallOpener", 0.1f);
 
@@ -37,7 +37,7 @@ public class WallWalkThrough : MonoBehaviour
     {
      WallClose.SetActive(false);
      WallOpen.SetActive(true) ;
-        print("wallshutter");
+        //print("wallshutter");
         
     }
 
@@ -45,7 +45,7 @@ public class WallWalkThrough : MonoBehaviour
     {
         WallOpen.SetActive(false);
         WallClose.SetActive(true);
-        print("wall is open");
+       // print("wall is open");
     }
 
 

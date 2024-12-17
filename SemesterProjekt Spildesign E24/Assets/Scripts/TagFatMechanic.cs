@@ -86,14 +86,14 @@ public class TagFatMechanic : MonoBehaviour
             player2Light.SetActive(false);
            // player1Light.enabled = true;
           //      player2Light.enabled = false;
-            print("player 1 has lights on ");
+           // print("player 1 has lights on ");
         }
         if (Player2.tag == "HasDonut")
         {
             player2Light.SetActive(true);
             player1Light.SetActive(false);
           //  player2Light.enabled = true;
-            print("player 2 has lights on ");
+           // print("player 2 has lights on ");
 
             //   player1Light.enabled = false;
         }
@@ -197,7 +197,7 @@ public class TagFatMechanic : MonoBehaviour
 
                 TouchingSound.Play();
 
-                print("1");
+              //  print("1");
 
             // (Re)Start the timer
 
@@ -217,7 +217,7 @@ public class TagFatMechanic : MonoBehaviour
 
                 TouchingSound.Play();
 
-            print("2");
+        //    print("2");
                 lastTimeUsed = Time.time;
 
                 //if (GCcooldown.tagReady) { }
