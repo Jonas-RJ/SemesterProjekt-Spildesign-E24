@@ -38,6 +38,7 @@ public class Player2Movement : MonoBehaviour
         dashTrail = GetComponent<TrailRenderer>();
      //   _p2CanDash = false;
         _animator = GetComponent<Animator>();
+        dashTrail.enabled = false;
     }
 
     public void SetAnimation()
@@ -117,8 +118,10 @@ public class Player2Movement : MonoBehaviour
      // Sets can dash to false, so as to prevent spam dashing
         isDashing = true; // Sets isdashing to true, as we are currently running the code for dashing
         _moveSpeed += _dashMoveSpeed; // multiply here
+        dashTrail.enabled = true;
         yield return new WaitForSeconds(_dashDuration); // After the dash duration, removes the above speed changes, so as to go back to normal
         _moveSpeed = _originalMoveSpeed;
+        dashTrail.enabled = false;
         yield return new WaitForSeconds(_dashCooldown); // We then wait for the desired cooldown time
        // And finally we set canDash to true, so we can dash from the start again.
         dashReadySound.Play();
