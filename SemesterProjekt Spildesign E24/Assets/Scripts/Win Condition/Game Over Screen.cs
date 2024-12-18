@@ -40,14 +40,15 @@ public class GameOverScreen : MonoBehaviour
         {
             winnerText.text = "PRISONER WINS!";
         }
-
+        Time.timeScale = 0;
     }
 
     //Loader vores spil scene ved tryk af restart knap som vi giver denne method
     public void RestartButton()
     {
         SceneManager.LoadScene("GameTestScene");
-        
+
+
     }
     //Loader Main Menu scene ved tryk af knap som vi giver denne method
     public void MainMenuButton()

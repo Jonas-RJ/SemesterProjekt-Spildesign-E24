@@ -13,6 +13,7 @@ public class MapController : MonoBehaviour
 
     void Start()
     {
+        Time.timeScale = 1;
         mapSelector = Random.Range(0, 4);
         print(mapSelector);
         gameObject.SetActive(false);
