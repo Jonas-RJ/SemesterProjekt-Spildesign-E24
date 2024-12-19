@@ -12,6 +12,7 @@ using UnityEngine.Rendering.Universal;
 
 public class TagFatMechanic : MonoBehaviour
 {
+    public PauseScreenManager _PSManager;
     public Timer _timer;
     //public GameController GCcooldown;
     public bool donutIsTaken = false;
@@ -118,7 +119,7 @@ public class TagFatMechanic : MonoBehaviour
         }
 
 
-       
+
 
 
 
