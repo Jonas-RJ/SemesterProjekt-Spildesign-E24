@@ -7,47 +7,34 @@ public class WallWalkThrough : MonoBehaviour
 
     public float wallCD = 10;
 
-    public GameObject Player2;
     public GameObject WallOpen;
     public GameObject WallClose;
     public AudioSource wallGoThrough;
 
-    void Start(){}
-    void Update()
-    {
-        
-    }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-    //    print("Wall works now");
+        //invoke to be able to call after X amount of time.
+        Invoke("wallCloser", 0.1f);
 
-        Invoke("wallOpener", 0.1f);
-
-        Invoke("wallShutter", 10f);
+        Invoke("wallOpener", wallCD);
 
 
         wallGoThrough.Play();
-        
-        
     }
 
 
-    private void wallShutter() 
+    private void wallOpener() 
     {
+        //disables red wall, enables green
      WallClose.SetActive(false);
-     WallOpen.SetActive(true) ;
-        //print("wallshutter");
-        
+     WallOpen.SetActive(true) ;        
     }
 
-    private void wallOpener()
+    private void wallCloser()
     {
+        //enables red closed wall, disables green open wall
         WallOpen.SetActive(false);
         WallClose.SetActive(true);
-       // print("wall is open");
     }
-
-
-  
 }

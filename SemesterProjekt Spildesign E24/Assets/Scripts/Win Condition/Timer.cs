@@ -25,9 +25,7 @@ public class Timer : MonoBehaviour
         
         if (canRun)
         {
-            // Starter med at give de to timere en farve der matcher spillerfarven
-          //  timerText1.color = Color.blue;
-           // timerText2.color = orange;
+
 
             //if statement checks if timer reaches 0 and keeps it at 0 if it does
             if (remaining1Time > 0 && donuttag.Player1.tag == "HasDonut") //&& donut get == true
@@ -41,8 +39,6 @@ public class Timer : MonoBehaviour
                 //Stops the timer when it reaches 0 and turns it green
                 remaining1Time = 0;
                 GameOverScreen.GameOver();
-                //timerText1.color = Color.green;
-                //timerText2.color = Color.red;
                 //Display player wins for den spiller der vinder
             }
 
@@ -58,8 +54,6 @@ public class Timer : MonoBehaviour
                 //Stops the timer when it reaches 0 and turns it green
                 remaining2Time = 0;
                 GameOverScreen.GameOver();
-                //timerText2.color = Color.green;
-                //timerText1.color = Color.red;
                 //Display player wins for den spiller der vinder
             }
 
