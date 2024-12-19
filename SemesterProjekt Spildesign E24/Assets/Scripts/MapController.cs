@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MapController : MonoBehaviour
 {
+    public PauseScreenManager _PSManager;
     public GameObject emilMap;
     public GameObject martinMap;
     public GameObject kenniMap;
@@ -24,14 +25,14 @@ public class MapController : MonoBehaviour
                 kenniMap.SetActive(false);
                 martinMap.SetActive(false);
                 jonasMap.SetActive(true);
-                print("jonas map");
+                print("Jonas map");
                 break;          
             case 1:
                 emilMap.SetActive(false);
                 kenniMap.SetActive(false);
                 martinMap.SetActive(true);
                 jonasMap.SetActive(false);
-                print("martin map");
+                print("Martin map");
                 break;
             case 2:
                 emilMap.SetActive(false);
@@ -54,6 +55,6 @@ public class MapController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

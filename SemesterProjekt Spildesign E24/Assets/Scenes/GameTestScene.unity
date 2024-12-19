@@ -293,6 +293,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Kennis Map
       objectReference: {fileID: 0}
+    - target: {fileID: 3876567735616830998, guid: 03c929b153ec9de4d923cedcb3f8b84e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4530701739968107835, guid: 03c929b153ec9de4d923cedcb3f8b84e, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.5
@@ -505,6 +509,10 @@ PrefabInstance:
     - target: {fileID: 249243863660723409, guid: b078e620ac61fa549bdbf0d58f6c4d1c, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 336219034700184567, guid: b078e620ac61fa549bdbf0d58f6c4d1c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 786076369944913662, guid: b078e620ac61fa549bdbf0d58f6c4d1c, type: 3}
       propertyPath: m_LocalScale.x
@@ -738,6 +746,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -275
       objectReference: {fileID: 0}
+    - target: {fileID: 7120124426130253442, guid: b078e620ac61fa549bdbf0d58f6c4d1c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7331810960386011363, guid: b078e620ac61fa549bdbf0d58f6c4d1c, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.5
@@ -863,6 +875,10 @@ PrefabInstance:
       propertyPath: martinMap
       value: 
       objectReference: {fileID: 1863408977}
+    - target: {fileID: 7222939098339694422, guid: 67a98a6a751b20648a690f1adfe0def8, type: 3}
+      propertyPath: _PSManager
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8383138770043859060, guid: 67a98a6a751b20648a690f1adfe0def8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
