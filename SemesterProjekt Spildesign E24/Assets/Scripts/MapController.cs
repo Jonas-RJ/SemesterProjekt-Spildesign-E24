@@ -16,7 +16,6 @@ public class MapController : MonoBehaviour
     {
         Time.timeScale = 1;
         mapSelector = Random.Range(0, 4);
-        print(mapSelector);
         gameObject.SetActive(false);
         switch (mapSelector)
         {
@@ -25,36 +24,25 @@ public class MapController : MonoBehaviour
                 kenniMap.SetActive(false);
                 martinMap.SetActive(false);
                 jonasMap.SetActive(true);
-                print("Jonas map");
                 break;          
             case 1:
                 emilMap.SetActive(false);
                 kenniMap.SetActive(false);
                 martinMap.SetActive(true);
                 jonasMap.SetActive(false);
-                print("Martin map");
                 break;
             case 2:
                 emilMap.SetActive(false);
                 kenniMap.SetActive(true);
                 martinMap.SetActive(false);
                 jonasMap.SetActive(false);
-                print("Kenni map");
                 break;
             case 3:
                 emilMap.SetActive(true);
                 kenniMap.SetActive(false);
                 martinMap.SetActive(false);
                 jonasMap.SetActive(false);
-                print("Emil map");
-
                 break;
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 }

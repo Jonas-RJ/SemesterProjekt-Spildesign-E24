@@ -14,9 +14,6 @@ public class GameOverScreen : MonoBehaviour
     public GameObject player2;
     int i;
 
-
-
-
     //Checker hvem der har Donutten for at kunne skrive hvem der har vundet
     public void GameOver()
     {
@@ -47,8 +44,6 @@ public class GameOverScreen : MonoBehaviour
     public void RestartButton()
     {
         SceneManager.LoadScene("GameTestScene");
-
-
     }
     //Loader Main Menu scene ved tryk af knap som vi giver denne method
     public void MainMenuButton()

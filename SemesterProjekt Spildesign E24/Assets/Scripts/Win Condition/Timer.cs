@@ -25,18 +25,16 @@ public class Timer : MonoBehaviour
         
         if (canRun)
         {
-
-
             //if statement checks if timer reaches 0 and keeps it at 0 if it does
             if (remaining1Time > 0 && donuttag.Player1.tag == "HasDonut") //&& donut get == true
             {
                 //Subtracts time from the remaingingTime variable
                 remaining1Time -= Time.deltaTime;
             }
-            //Endnu et if statement indeni til hvis timeren skal reset hvis den anden player tager donut?
+            //Hvis tid er lig med eller mindre end 0, kør indhold.
             else if (remaining1Time <= 0)
             {
-                //Stops the timer when it reaches 0 and turns it green
+                //Stops the timer when it reaches 0
                 remaining1Time = 0;
                 GameOverScreen.GameOver();
                 //Display player wins for den spiller der vinder
@@ -48,10 +46,10 @@ public class Timer : MonoBehaviour
                 //Subtracts time from the remaingingTime variable
                 remaining2Time -= Time.deltaTime;
             }
-            //Endnu et if statement indeni til hvis timeren skal reset hvis den anden player tager donut?
+            //Hvis tid er lig med eller mindre end 0, kør indhold.
             else if (remaining2Time <= 0)
             {
-                //Stops the timer when it reaches 0 and turns it green
+                //Stops the timer when it reaches 0
                 remaining2Time = 0;
                 GameOverScreen.GameOver();
                 //Display player wins for den spiller der vinder

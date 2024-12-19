@@ -36,7 +36,6 @@ public class Player2Movement : MonoBehaviour
     {
         _rb = GetComponent<Rigidbody2D>();
         dashTrail = GetComponent<TrailRenderer>();
-     //   _p2CanDash = false;
         _animator = GetComponent<Animator>();
         dashTrail.enabled = false;
     }
@@ -53,7 +52,6 @@ public class Player2Movement : MonoBehaviour
     }
     private void Update()
     {
-
         if (gameObject.tag == "NoDonut" && OtherPlayer.tag == "HasDonut" ) 
         {
             canDash = true;
@@ -75,10 +73,8 @@ public class Player2Movement : MonoBehaviour
     {
         //create a new smoothened vector that makes movement nicer and less janky
 
-
         //vector starts from zero and gradually moves up 
         _smoothedMoveInput = Vector2.SmoothDamp(_smoothedMoveInput, _movementInput, ref _smoothMoveVelocity, 0.1f);
-
 
         //set velocity with smoothed vector movement and movespeed variable.
         _rb.velocity = _smoothedMoveInput * _moveSpeed;
@@ -88,22 +84,14 @@ public class Player2Movement : MonoBehaviour
     {
         if (_movementInput != Vector2.zero)
         {
-
             Quaternion targetRotation = Quaternion.LookRotation(transform.forward, _smoothedMoveInput);
             Quaternion rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, _rotationSpeed * Time.deltaTime);
-
-
             _rb.MoveRotation(rotation);
-
         }
     }
 
     public void OnFire(InputValue inputValue)
     {
-        Debug.Log("Pressed Dash Button");
-
-        
-
         if (canDash && !isDashing)
         {
              StartCoroutine(Dash2());
@@ -126,7 +114,6 @@ public class Player2Movement : MonoBehaviour
        // And finally we set canDash to true, so we can dash from the start again.
         dashReadySound.Play();
         isDashing = false; // As we are no longer dashing, we set it to false (for animation reasons later?)
-
     }
 
     private void OnMove(InputValue inputValue)

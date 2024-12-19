@@ -9,8 +9,6 @@ public class GameController : MonoBehaviour
     public bool tagReady;
     public Coroutine tagCD;
     public bool firstTag;
-   // public bool coolDown;
-
 
     // Start is called before the first frame update
     void Start()
@@ -25,31 +23,12 @@ public class GameController : MonoBehaviour
         {
             StartCoroutine(startCooldown());
         }
-                
-
     }
-
-    /*
-    public void tagCooldown()
-    {
-        if (!coolDown)
-        {
-
-        }
-    }
-    */
     public IEnumerator startCooldown() 
          {
-
-        //if (tagReady) { yield return null; }
-        //else
-        //    {
             tagReady = false;
-
             yield return new WaitForSeconds(coolDownPeriod);
-
             tagReady = true;
-        //    }
         }
     
 }
